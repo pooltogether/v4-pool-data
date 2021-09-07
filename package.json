@@ -8,7 +8,11 @@
     "src"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=16"
+  },
+  "repository": {
+    "url": "https://github.com/pooltogether/v4-pool-data",
+    "type": "git"
   },
   "scripts": {
     "start": "tsdx watch",
@@ -26,13 +30,18 @@
     }
   },
   "prettier": {
-    "printWidth": 80,
-    "semi": true,
+    "printWidth": 100,
+    "tabWidth": 2,
+    "semi": false,
     "singleQuote": true,
-    "trailingComma": "es5"
+    "quoteProps": "consistent",
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": true,
+    "arrowParens": "always",
+    "trailingComma": "none"
   },
   "name": "v4-js-client",
-  "author": "Dylan DesRosier",
+  "author": "PoolTogether Inc.",
   "module": "dist/v4-js-client.esm.js",
   "size-limit": [
     {
@@ -51,5 +60,8 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
     "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "ajv": "^8.6.2"
   }
 }
