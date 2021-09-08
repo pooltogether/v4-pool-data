@@ -1,5 +1,3 @@
-import schema from './v4-pool-data.schema.json'
+import testnets from './testnets.json'
 
-export * from './types'
-
-export { schema }
+export { testnets }

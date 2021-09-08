@@ -16,10 +16,11 @@
   },
   "scripts": {
     "start": "tsdx watch",
+    "postbuild": "cp src/testnets.json dist/testnets.json",
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "prepare": "yarn build",
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
@@ -62,6 +63,7 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
+    "@pooltogether/contract-list-schema": "^0.1.0",
     "ajv": "^8.6.2"
   }
 }

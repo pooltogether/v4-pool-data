@@ -1127,6 +1127,11 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.20.tgz#111b5db0f501aa89b05076fa31f0ea0e0c292cd3"
   integrity sha512-88p7+M0QGxKpmnkfXjS4V26AnoC/eiqZutE8GLdaI5X12NY75bXSdTY9NkmYb2Xyk1O+MmkuO6Frmsj84V6I8Q==
 
+"@pooltogether/contract-list-schema@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@pooltogether/contract-list-schema/-/contract-list-schema-0.1.0.tgz#124c1c695ea13f280ed7905eb51d07a17917a555"
+  integrity sha512-ENJN/PrEVFggpLOeAGhY4xHYPLDXiO2FSEwk0yPh5tIbyS1+yMm0xcTMthz0Lw0RUH8SaUaSkNG/yOqKq8394Q==
+
 "@rollup/plugin-babel@^5.1.0":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-babel/-/plugin-babel-5.3.0.tgz#9cb1c5146ddd6a4968ad96f209c50c62f92f9879"
