@@ -5,206 +5,7 @@
   "contracts": [
     {
       "chainId": 4,
-      "address": "0x780541141d3eea11ce73A73fE33Bbf84F91d9338",
-      "version": { "major": 1, "minor": 0, "patch": 0 },
-      "type": "ClaimableDraw",
-      "abi": [
-        {
-          "inputs": [
-            { "internalType": "address", "name": "_owner", "type": "address" },
-            { "internalType": "contract IERC20", "name": "_token", "type": "address" },
-            {
-              "internalType": "contract IDrawCalculator",
-              "name": "_drawCalculator",
-              "type": "address"
-            }
-          ],
-          "stateMutability": "nonpayable",
-          "type": "constructor"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
-            { "indexed": true, "internalType": "uint32", "name": "drawId", "type": "uint32" },
-            { "indexed": false, "internalType": "uint256", "name": "payout", "type": "uint256" }
-          ],
-          "name": "ClaimedDraw",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "contract IDrawCalculator",
-              "name": "calculator",
-              "type": "address"
-            }
-          ],
-          "name": "DrawCalculatorSet",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "contract IERC20",
-              "name": "token",
-              "type": "address"
-            },
-            { "indexed": true, "internalType": "address", "name": "to", "type": "address" },
-            { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
-          ],
-          "name": "ERC20Withdrawn",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "pendingOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipOffered",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "previousOwner",
-              "type": "address"
-            },
-            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "contract IERC20",
-              "name": "token",
-              "type": "address"
-            }
-          ],
-          "name": "TokenSet",
-          "type": "event"
-        },
-        {
-          "inputs": [
-            { "internalType": "address", "name": "_user", "type": "address" },
-            { "internalType": "uint32[]", "name": "_drawIds", "type": "uint32[]" },
-            { "internalType": "bytes", "name": "_data", "type": "bytes" }
-          ],
-          "name": "claim",
-          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "claimOwnership",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "getDrawCalculator",
-          "outputs": [
-            { "internalType": "contract IDrawCalculator", "name": "", "type": "address" }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            { "internalType": "address", "name": "user", "type": "address" },
-            { "internalType": "uint32", "name": "drawId", "type": "uint32" }
-          ],
-          "name": "getDrawPayoutBalanceOf",
-          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "getToken",
-          "outputs": [{ "internalType": "contract IERC20", "name": "", "type": "address" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "owner",
-          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "pendingOwner",
-          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "renounceOwnership",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            {
-              "internalType": "contract IDrawCalculator",
-              "name": "_newCalculator",
-              "type": "address"
-            }
-          ],
-          "name": "setDrawCalculator",
-          "outputs": [
-            { "internalType": "contract IDrawCalculator", "name": "", "type": "address" }
-          ],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
-          "name": "transferOwnership",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            { "internalType": "contract IERC20", "name": "_erc20Token", "type": "address" },
-            { "internalType": "address", "name": "_to", "type": "address" },
-            { "internalType": "uint256", "name": "_amount", "type": "uint256" }
-          ],
-          "name": "withdrawERC20",
-          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        }
-      ],
-      "tags": [],
-      "extensions": {}
-    },
-    {
-      "chainId": 4,
-      "address": "0x4C61412B2c15563fAc8B222ceD182dafc4888cf2",
+      "address": "0xABE7b58aa8c933CB8b1D75B4680b2B98b48cFc3E",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawBeacon",
       "abi": [
@@ -213,8 +14,9 @@
             { "internalType": "address", "name": "_owner", "type": "address" },
             { "internalType": "contract IDrawHistory", "name": "_drawHistory", "type": "address" },
             { "internalType": "contract RNGInterface", "name": "_rng", "type": "address" },
-            { "internalType": "uint256", "name": "_beaconPeriodStart", "type": "uint256" },
-            { "internalType": "uint256", "name": "_beaconPeriodSeconds", "type": "uint256" }
+            { "internalType": "uint32", "name": "_nextDrawId", "type": "uint32" },
+            { "internalType": "uint64", "name": "_beaconPeriodStart", "type": "uint64" },
+            { "internalType": "uint32", "name": "_beaconPeriodSeconds", "type": "uint32" }
           ],
           "stateMutability": "nonpayable",
           "type": "constructor"
@@ -224,9 +26,9 @@
           "inputs": [
             {
               "indexed": false,
-              "internalType": "uint256",
+              "internalType": "uint32",
               "name": "drawPeriodSeconds",
-              "type": "uint256"
+              "type": "uint32"
             }
           ],
           "name": "BeaconPeriodSecondsUpdated",
@@ -236,12 +38,7 @@
           "anonymous": false,
           "inputs": [
             { "indexed": true, "internalType": "address", "name": "operator", "type": "address" },
-            {
-              "indexed": true,
-              "internalType": "uint256",
-              "name": "drawPeriodStartedAt",
-              "type": "uint256"
-            }
+            { "indexed": true, "internalType": "uint64", "name": "startedAt", "type": "uint64" }
           ],
           "name": "BeaconPeriodStarted",
           "type": "event"
@@ -261,17 +58,18 @@
               "name": "rng",
               "type": "address"
             },
+            { "indexed": false, "internalType": "uint32", "name": "nextDrawId", "type": "uint32" },
             {
               "indexed": false,
-              "internalType": "uint256",
-              "name": "rngRequestPeriodStart",
-              "type": "uint256"
+              "internalType": "uint64",
+              "name": "beaconPeriodStartedAt",
+              "type": "uint64"
             },
             {
               "indexed": false,
-              "internalType": "uint256",
-              "name": "drawPeriodSeconds",
-              "type": "uint256"
+              "internalType": "uint32",
+              "name": "beaconPeriodSeconds",
+              "type": "uint32"
             }
           ],
           "name": "Deployed",
@@ -304,12 +102,6 @@
         {
           "anonymous": false,
           "inputs": [
-            {
-              "indexed": true,
-              "internalType": "contract IDrawHistory",
-              "name": "previousDrawHistory",
-              "type": "address"
-            },
             {
               "indexed": true,
               "internalType": "contract IDrawHistory",
@@ -381,35 +173,35 @@
         {
           "inputs": [],
           "name": "beaconPeriodEndAt",
-          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+          "outputs": [{ "internalType": "uint64", "name": "", "type": "uint64" }],
           "stateMutability": "view",
           "type": "function"
         },
         {
           "inputs": [],
           "name": "beaconPeriodRemainingSeconds",
-          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+          "outputs": [{ "internalType": "uint32", "name": "", "type": "uint32" }],
           "stateMutability": "view",
           "type": "function"
         },
         {
           "inputs": [],
           "name": "beaconPeriodSeconds",
-          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+          "outputs": [{ "internalType": "uint32", "name": "", "type": "uint32" }],
           "stateMutability": "view",
           "type": "function"
         },
         {
           "inputs": [],
           "name": "beaconPeriodStartedAt",
-          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+          "outputs": [{ "internalType": "uint64", "name": "", "type": "uint64" }],
           "stateMutability": "view",
           "type": "function"
         },
         {
           "inputs": [{ "internalType": "uint256", "name": "currentTime", "type": "uint256" }],
           "name": "calculateNextBeaconPeriodStartTime",
-          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+          "outputs": [{ "internalType": "uint64", "name": "", "type": "uint64" }],
           "stateMutability": "view",
           "type": "function"
         },
@@ -450,7 +242,21 @@
         },
         {
           "inputs": [],
-          "name": "drawHistory",
+          "name": "getBeaconPeriodSeconds",
+          "outputs": [{ "internalType": "uint32", "name": "", "type": "uint32" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getBeaconPeriodStartedAt",
+          "outputs": [{ "internalType": "uint64", "name": "", "type": "uint64" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getDrawHistory",
           "outputs": [{ "internalType": "contract IDrawHistory", "name": "", "type": "address" }],
           "stateMutability": "view",
           "type": "function"
@@ -465,6 +271,27 @@
         {
           "inputs": [],
           "name": "getLastRngRequestId",
+          "outputs": [{ "internalType": "uint32", "name": "", "type": "uint32" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getNextDrawId",
+          "outputs": [{ "internalType": "uint32", "name": "", "type": "uint32" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getRngService",
+          "outputs": [{ "internalType": "contract RNGInterface", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getRngTimeout",
           "outputs": [{ "internalType": "uint32", "name": "", "type": "uint32" }],
           "stateMutability": "view",
           "type": "function"
@@ -541,7 +368,7 @@
         },
         {
           "inputs": [
-            { "internalType": "uint256", "name": "beaconPeriodSeconds", "type": "uint256" }
+            { "internalType": "uint32", "name": "_beaconPeriodSeconds", "type": "uint32" }
           ],
           "name": "setBeaconPeriodSeconds",
           "outputs": [],
@@ -593,13 +420,212 @@
     },
     {
       "chainId": 4,
-      "address": "0xc2A16d3e8e6cc4acFAFc50BFDC7953Fe631cfd89",
+      "address": "0x8C62a9baae75Cefd5d213A6cC9E7BacA24512eBE",
+      "version": { "major": 1, "minor": 0, "patch": 0 },
+      "type": "DrawCalculator",
+      "abi": [
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_owner", "type": "address" },
+            { "internalType": "contract ITicket", "name": "_ticket", "type": "address" },
+            { "internalType": "contract IDrawHistory", "name": "_drawHistory", "type": "address" },
+            {
+              "internalType": "contract PrizeDistributionHistory",
+              "name": "_prizeDistributionHistory",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "contract ITicket",
+              "name": "ticket",
+              "type": "address"
+            }
+          ],
+          "name": "Deployed",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "contract IDrawHistory",
+              "name": "drawHistory",
+              "type": "address"
+            }
+          ],
+          "name": "DrawHistorySet",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "contract DrawPrize",
+              "name": "drawPrize",
+              "type": "address"
+            }
+          ],
+          "name": "DrawPrizeSet",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "pendingOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipOffered",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "DISTRIBUTIONS_LENGTH",
+          "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_user", "type": "address" },
+            { "internalType": "uint32[]", "name": "_drawIds", "type": "uint32[]" },
+            { "internalType": "bytes", "name": "_pickIndicesForDraws", "type": "bytes" }
+          ],
+          "name": "calculate",
+          "outputs": [{ "internalType": "uint256[]", "name": "", "type": "uint256[]" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_user", "type": "address" },
+            { "internalType": "uint64[]", "name": "_pickIndices", "type": "uint64[]" },
+            { "internalType": "uint32", "name": "_drawId", "type": "uint32" }
+          ],
+          "name": "checkPrizeDistributionIndicesForDrawId",
+          "outputs": [
+            {
+              "components": [
+                { "internalType": "bool", "name": "won", "type": "bool" },
+                { "internalType": "uint8", "name": "distributionIndex", "type": "uint8" }
+              ],
+              "internalType": "struct IDrawCalculator.PickPrize[]",
+              "name": "",
+              "type": "tuple[]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "claimOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getDrawHistory",
+          "outputs": [{ "internalType": "contract IDrawHistory", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_user", "type": "address" },
+            { "internalType": "uint32[]", "name": "_drawIds", "type": "uint32[]" }
+          ],
+          "name": "getNormalizedBalancesForDrawIds",
+          "outputs": [{ "internalType": "uint256[]", "name": "", "type": "uint256[]" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getPrizeDistributionHistory",
+          "outputs": [
+            { "internalType": "contract PrizeDistributionHistory", "name": "", "type": "address" }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "owner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "pendingOwner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "renounceOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "contract IDrawHistory", "name": "_drawHistory", "type": "address" }
+          ],
+          "name": "setDrawHistory",
+          "outputs": [{ "internalType": "contract IDrawHistory", "name": "", "type": "address" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
+          "name": "transferOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ],
+      "tags": [],
+      "extensions": {}
+    },
+    {
+      "chainId": 4,
+      "address": "0x9B2F5e111cC71848608a60a85106fc271338FaD3",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawCalculatorTimelock",
       "abi": [
         {
           "inputs": [
-            { "internalType": "address", "name": "owner", "type": "address" },
+            { "internalType": "address", "name": "_owner", "type": "address" },
             {
               "internalType": "contract IDrawCalculator",
               "name": "_calculator",
@@ -615,22 +641,15 @@
           "inputs": [
             {
               "indexed": true,
-              "internalType": "contract ClaimableDraw",
-              "name": "claimableDraw",
+              "internalType": "contract IDrawCalculator",
+              "name": "drawCalculator",
               "type": "address"
-            }
-          ],
-          "name": "ClaimableDrawSet",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
+            },
             {
-              "indexed": true,
-              "internalType": "contract ITicket",
-              "name": "ticket",
-              "type": "address"
+              "indexed": false,
+              "internalType": "uint32",
+              "name": "timelockDuration",
+              "type": "uint32"
             }
           ],
           "name": "Deployed",
@@ -839,7 +858,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x16065843F4176e4D67BA942Dd8fdB1b35f4c157B",
+      "address": "0x9633DD87e258aef6e926f8bea2e240577796076f",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawHistory",
       "abi": [
@@ -854,13 +873,19 @@
         {
           "anonymous": false,
           "inputs": [
-            { "indexed": false, "internalType": "uint32", "name": "drawId", "type": "uint32" },
-            { "indexed": false, "internalType": "uint32", "name": "timestamp", "type": "uint32" },
+            { "indexed": true, "internalType": "uint32", "name": "drawId", "type": "uint32" },
             {
+              "components": [
+                { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint64", "name": "timestamp", "type": "uint64" },
+                { "internalType": "uint64", "name": "beaconPeriodStartedAt", "type": "uint64" },
+                { "internalType": "uint32", "name": "beaconPeriodSeconds", "type": "uint32" }
+              ],
               "indexed": false,
-              "internalType": "uint256",
-              "name": "winningRandomNumber",
-              "type": "uint256"
+              "internalType": "struct DrawLib.Draw",
+              "name": "draw",
+              "type": "tuple"
             }
           ],
           "name": "DrawSet",
@@ -922,32 +947,16 @@
           "type": "function"
         },
         {
-          "inputs": [],
-          "name": "draws",
-          "outputs": [
-            {
-              "components": [
-                { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
-                { "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawId", "type": "uint32" }
-              ],
-              "internalType": "struct DrawLib.Draw[256]",
-              "name": "",
-              "type": "tuple[256]"
-            }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
           "inputs": [{ "internalType": "uint32", "name": "drawId", "type": "uint32" }],
           "name": "getDraw",
           "outputs": [
             {
               "components": [
                 { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
-                { "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint64", "name": "timestamp", "type": "uint64" },
+                { "internalType": "uint64", "name": "beaconPeriodStartedAt", "type": "uint64" },
+                { "internalType": "uint32", "name": "beaconPeriodSeconds", "type": "uint32" }
               ],
               "internalType": "struct DrawLib.Draw",
               "name": "",
@@ -964,8 +973,10 @@
             {
               "components": [
                 { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
-                { "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint64", "name": "timestamp", "type": "uint64" },
+                { "internalType": "uint64", "name": "beaconPeriodStartedAt", "type": "uint64" },
+                { "internalType": "uint32", "name": "beaconPeriodSeconds", "type": "uint32" }
               ],
               "internalType": "struct DrawLib.Draw[]",
               "name": "",
@@ -982,8 +993,10 @@
             {
               "components": [
                 { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
-                { "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint64", "name": "timestamp", "type": "uint64" },
+                { "internalType": "uint64", "name": "beaconPeriodStartedAt", "type": "uint64" },
+                { "internalType": "uint32", "name": "beaconPeriodSeconds", "type": "uint32" }
               ],
               "internalType": "struct DrawLib.Draw",
               "name": "",
@@ -1000,8 +1013,10 @@
             {
               "components": [
                 { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
-                { "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint64", "name": "timestamp", "type": "uint64" },
+                { "internalType": "uint64", "name": "beaconPeriodStartedAt", "type": "uint64" },
+                { "internalType": "uint32", "name": "beaconPeriodSeconds", "type": "uint32" }
               ],
               "internalType": "struct DrawLib.Draw",
               "name": "",
@@ -1037,8 +1052,10 @@
             {
               "components": [
                 { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
-                { "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint64", "name": "timestamp", "type": "uint64" },
+                { "internalType": "uint64", "name": "beaconPeriodStartedAt", "type": "uint64" },
+                { "internalType": "uint32", "name": "beaconPeriodSeconds", "type": "uint32" }
               ],
               "internalType": "struct DrawLib.Draw",
               "name": "_draw",
@@ -1062,8 +1079,10 @@
             {
               "components": [
                 { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
-                { "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint64", "name": "timestamp", "type": "uint64" },
+                { "internalType": "uint64", "name": "beaconPeriodStartedAt", "type": "uint64" },
+                { "internalType": "uint32", "name": "beaconPeriodSeconds", "type": "uint32" }
               ],
               "internalType": "struct DrawLib.Draw",
               "name": "_newDraw",
@@ -1095,16 +1114,215 @@
     },
     {
       "chainId": 4,
-      "address": "0xbB52119DB9Cc913C8244Afb60b6a9bC4B44595D2",
+      "address": "0x439777e646acD8CF484cB8097aa4324BcEf99067",
       "version": { "major": 1, "minor": 0, "patch": 0 },
-      "type": "DrawSettingsTimelockTrigger",
+      "type": "DrawPrize",
       "abi": [
         {
           "inputs": [
-            { "internalType": "address", "name": "owner", "type": "address" },
+            { "internalType": "address", "name": "_owner", "type": "address" },
+            { "internalType": "contract IERC20", "name": "_token", "type": "address" },
             {
-              "internalType": "contract ITsunamiDrawSettingsHistory",
-              "name": "_tsunamiDrawSettingsHistory",
+              "internalType": "contract IDrawCalculator",
+              "name": "_drawCalculator",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
+            { "indexed": true, "internalType": "uint32", "name": "drawId", "type": "uint32" },
+            { "indexed": false, "internalType": "uint256", "name": "payout", "type": "uint256" }
+          ],
+          "name": "ClaimedDraw",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "contract IDrawCalculator",
+              "name": "calculator",
+              "type": "address"
+            }
+          ],
+          "name": "DrawCalculatorSet",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "contract IERC20",
+              "name": "token",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "to", "type": "address" },
+            { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
+          ],
+          "name": "ERC20Withdrawn",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "pendingOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipOffered",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "contract IERC20",
+              "name": "token",
+              "type": "address"
+            }
+          ],
+          "name": "TokenSet",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_user", "type": "address" },
+            { "internalType": "uint32[]", "name": "_drawIds", "type": "uint32[]" },
+            { "internalType": "bytes", "name": "_data", "type": "bytes" }
+          ],
+          "name": "claim",
+          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "claimOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getDrawCalculator",
+          "outputs": [
+            { "internalType": "contract IDrawCalculator", "name": "", "type": "address" }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "user", "type": "address" },
+            { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+          ],
+          "name": "getDrawPayoutBalanceOf",
+          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getToken",
+          "outputs": [{ "internalType": "contract IERC20", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "owner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "pendingOwner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "renounceOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IDrawCalculator",
+              "name": "_newCalculator",
+              "type": "address"
+            }
+          ],
+          "name": "setDrawCalculator",
+          "outputs": [
+            { "internalType": "contract IDrawCalculator", "name": "", "type": "address" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
+          "name": "transferOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "contract IERC20", "name": "_erc20Token", "type": "address" },
+            { "internalType": "address", "name": "_to", "type": "address" },
+            { "internalType": "uint256", "name": "_amount", "type": "uint256" }
+          ],
+          "name": "withdrawERC20",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ],
+      "tags": [],
+      "extensions": {}
+    },
+    {
+      "chainId": 4,
+      "address": "0xB3949Cd2FcF76F0e85Bd03c953d28F9d5b0bFF42",
+      "version": { "major": 1, "minor": 0, "patch": 0 },
+      "type": "L1TimelockTrigger",
+      "abi": [
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_owner", "type": "address" },
+            {
+              "internalType": "contract IPrizeDistributionHistory",
+              "name": "_prizeDistributionHistory",
               "type": "address"
             },
             {
@@ -1115,6 +1333,25 @@
           ],
           "stateMutability": "nonpayable",
           "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "contract IPrizeDistributionHistory",
+              "name": "prizeDistributionHistory",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "contract IDrawCalculatorTimelock",
+              "name": "timelock",
+              "type": "address"
+            }
+          ],
+          "name": "Deployed",
+          "type": "event"
         },
         {
           "anonymous": false,
@@ -1186,25 +1423,34 @@
           "type": "function"
         },
         {
+          "inputs": [],
+          "name": "prizeDistributionHistory",
+          "outputs": [
+            { "internalType": "contract IPrizeDistributionHistory", "name": "", "type": "address" }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
           "inputs": [
             { "internalType": "uint32", "name": "_drawId", "type": "uint32" },
             {
               "components": [
                 { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
                 { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
                 { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
                 { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
                 { "internalType": "uint256", "name": "prize", "type": "uint256" }
               ],
-              "internalType": "struct DrawLib.TsunamiDrawSettings",
+              "internalType": "struct DrawLib.PrizeDistribution",
               "name": "_drawSetting",
               "type": "tuple"
             }
           ],
-          "name": "pushDrawSettings",
+          "name": "push",
           "outputs": [],
           "stateMutability": "nonpayable",
           "type": "function"
@@ -1224,6 +1470,15 @@
           "type": "function"
         },
         {
+          "inputs": [],
+          "name": "timelock",
+          "outputs": [
+            { "internalType": "contract IDrawCalculatorTimelock", "name": "", "type": "address" }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
           "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
           "name": "transferOwnership",
           "outputs": [],
@@ -1236,7 +1491,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x3C1BdD75B704f3cf67e6D691c43eFf37309d97f5",
+      "address": "0xB7816fC5625654EF2107C74e420925ec00124c1C",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "MockYieldSource",
       "abi": [
@@ -1415,7 +1670,965 @@
     },
     {
       "chainId": 4,
-      "address": "0xdeC5E93b04d7A3c472982B9F6340C778CbA09Afa",
+      "address": "0x44cb41ec98b58Ded503ceee75791AF4f4b51c5E9",
+      "version": { "major": 1, "minor": 0, "patch": 0 },
+      "type": "PrizeDistributionHistory",
+      "abi": [
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_owner", "type": "address" },
+            { "internalType": "uint8", "name": "_cardinality", "type": "uint8" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": false, "internalType": "uint8", "name": "cardinality", "type": "uint8" }
+          ],
+          "name": "Deployed",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": false, "internalType": "uint32", "name": "drawId", "type": "uint32" },
+            { "indexed": false, "internalType": "uint32", "name": "timestamp", "type": "uint32" },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "winningRandomNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "DrawSet",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousManager",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newManager", "type": "address" }
+          ],
+          "name": "ManagerTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "pendingOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipOffered",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "uint32", "name": "drawId", "type": "uint32" },
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" }
+              ],
+              "indexed": false,
+              "internalType": "struct DrawLib.PrizeDistribution",
+              "name": "prizeDistributions",
+              "type": "tuple"
+            }
+          ],
+          "name": "PrizeDistributionsSet",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "claimOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getNewestPrizeDistribution",
+          "outputs": [
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" }
+              ],
+              "internalType": "struct DrawLib.PrizeDistribution",
+              "name": "prizeDistribution",
+              "type": "tuple"
+            },
+            { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getOldestPrizeDistribution",
+          "outputs": [
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" }
+              ],
+              "internalType": "struct DrawLib.PrizeDistribution",
+              "name": "prizeDistribution",
+              "type": "tuple"
+            },
+            { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "uint32", "name": "_drawId", "type": "uint32" }],
+          "name": "getPrizeDistribution",
+          "outputs": [
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" }
+              ],
+              "internalType": "struct DrawLib.PrizeDistribution",
+              "name": "",
+              "type": "tuple"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "uint32[]", "name": "_drawIds", "type": "uint32[]" }],
+          "name": "getPrizeDistributions",
+          "outputs": [
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" }
+              ],
+              "internalType": "struct DrawLib.PrizeDistribution[]",
+              "name": "",
+              "type": "tuple[]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "manager",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "owner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "pendingOwner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "uint32", "name": "_drawId", "type": "uint32" },
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" }
+              ],
+              "internalType": "struct DrawLib.PrizeDistribution",
+              "name": "_prizeDistribution",
+              "type": "tuple"
+            }
+          ],
+          "name": "pushPrizeDistribution",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "renounceOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newManager", "type": "address" }],
+          "name": "setManager",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "uint32", "name": "_drawId", "type": "uint32" },
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" }
+              ],
+              "internalType": "struct DrawLib.PrizeDistribution",
+              "name": "_prizeDistribution",
+              "type": "tuple"
+            }
+          ],
+          "name": "setPrizeDistribution",
+          "outputs": [{ "internalType": "uint32", "name": "", "type": "uint32" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
+          "name": "transferOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ],
+      "tags": [],
+      "extensions": {}
+    },
+    {
+      "chainId": 4,
+      "address": "0xC9CdBd7E968AD1458781d01131501B016948B171",
+      "version": { "major": 1, "minor": 0, "patch": 0 },
+      "type": "PrizeFlush",
+      "abi": [
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_owner", "type": "address" },
+            { "internalType": "address", "name": "_destination", "type": "address" },
+            { "internalType": "contract IStrategy", "name": "_strategy", "type": "address" },
+            { "internalType": "contract IReserve", "name": "_reserve", "type": "address" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "destination",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "contract IReserve",
+              "name": "reserve",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "contract IStrategy",
+              "name": "strategy",
+              "type": "address"
+            }
+          ],
+          "name": "Deployed",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "destination",
+              "type": "address"
+            }
+          ],
+          "name": "DestinationSet",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "address", "name": "recipient", "type": "address" },
+            { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
+          ],
+          "name": "Flushed",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousManager",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newManager", "type": "address" }
+          ],
+          "name": "ManagerTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "pendingOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipOffered",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "contract IReserve",
+              "name": "reserve",
+              "type": "address"
+            }
+          ],
+          "name": "ReserveSet",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "contract IStrategy",
+              "name": "strategy",
+              "type": "address"
+            }
+          ],
+          "name": "StrategySet",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "claimOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "flush",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getDestination",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getReserve",
+          "outputs": [{ "internalType": "contract IReserve", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getStrategy",
+          "outputs": [{ "internalType": "contract IStrategy", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "manager",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "owner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "pendingOwner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "renounceOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_destination", "type": "address" }],
+          "name": "setDestination",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newManager", "type": "address" }],
+          "name": "setManager",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "contract IReserve", "name": "_reserve", "type": "address" }
+          ],
+          "name": "setReserve",
+          "outputs": [{ "internalType": "contract IReserve", "name": "", "type": "address" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "contract IStrategy", "name": "_strategy", "type": "address" }
+          ],
+          "name": "setStrategy",
+          "outputs": [{ "internalType": "contract IStrategy", "name": "", "type": "address" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
+          "name": "transferOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ],
+      "tags": [],
+      "extensions": {}
+    },
+    {
+      "chainId": 4,
+      "address": "0x3ea4e373931c85BF96cA5DBA772C68A08E6b167B",
+      "version": { "major": 1, "minor": 0, "patch": 0 },
+      "type": "PrizeSplitStrategy",
+      "abi": [
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_owner", "type": "address" },
+            { "internalType": "contract IPrizePool", "name": "_prizePool", "type": "address" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "address", "name": "owner", "type": "address" },
+            {
+              "indexed": false,
+              "internalType": "contract IPrizePool",
+              "name": "prizePool",
+              "type": "address"
+            }
+          ],
+          "name": "Deployed",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "totalPrizeCaptured",
+              "type": "uint256"
+            }
+          ],
+          "name": "Distributed",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "pendingOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipOffered",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "prizeAwarded",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "internalType": "contract IControlledToken",
+              "name": "token",
+              "type": "address"
+            }
+          ],
+          "name": "PrizeSplitAwarded",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "uint256", "name": "target", "type": "uint256" }
+          ],
+          "name": "PrizeSplitRemoved",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "address", "name": "target", "type": "address" },
+            { "indexed": false, "internalType": "uint16", "name": "percentage", "type": "uint16" },
+            { "indexed": false, "internalType": "uint256", "name": "index", "type": "uint256" }
+          ],
+          "name": "PrizeSplitSet",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "claimOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "distribute",
+          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getPrizePool",
+          "outputs": [{ "internalType": "contract IPrizePool", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "uint256", "name": "prizeSplitIndex", "type": "uint256" }],
+          "name": "getPrizeSplit",
+          "outputs": [
+            {
+              "components": [
+                { "internalType": "address", "name": "target", "type": "address" },
+                { "internalType": "uint16", "name": "percentage", "type": "uint16" }
+              ],
+              "internalType": "struct IPrizeSplit.PrizeSplitConfig",
+              "name": "",
+              "type": "tuple"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getPrizeSplits",
+          "outputs": [
+            {
+              "components": [
+                { "internalType": "address", "name": "target", "type": "address" },
+                { "internalType": "uint16", "name": "percentage", "type": "uint16" }
+              ],
+              "internalType": "struct IPrizeSplit.PrizeSplitConfig[]",
+              "name": "",
+              "type": "tuple[]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "owner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "pendingOwner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "renounceOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "components": [
+                { "internalType": "address", "name": "target", "type": "address" },
+                { "internalType": "uint16", "name": "percentage", "type": "uint16" }
+              ],
+              "internalType": "struct IPrizeSplit.PrizeSplitConfig",
+              "name": "prizeStrategySplit",
+              "type": "tuple"
+            },
+            { "internalType": "uint8", "name": "prizeSplitIndex", "type": "uint8" }
+          ],
+          "name": "setPrizeSplit",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "components": [
+                { "internalType": "address", "name": "target", "type": "address" },
+                { "internalType": "uint16", "name": "percentage", "type": "uint16" }
+              ],
+              "internalType": "struct IPrizeSplit.PrizeSplitConfig[]",
+              "name": "newPrizeSplits",
+              "type": "tuple[]"
+            }
+          ],
+          "name": "setPrizeSplits",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
+          "name": "transferOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ],
+      "tags": [],
+      "extensions": {}
+    },
+    {
+      "chainId": 4,
+      "address": "0x765494FDea0b325E1bC963EC695F953Da0859476",
+      "version": { "major": 1, "minor": 0, "patch": 0 },
+      "type": "Reserve",
+      "abi": [
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_owner", "type": "address" },
+            { "internalType": "contract IERC20", "name": "_token", "type": "address" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "reserveAccumulated",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "withdrawAccumulated",
+              "type": "uint256"
+            }
+          ],
+          "name": "Checkpoint",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "contract IERC20",
+              "name": "token",
+              "type": "address"
+            }
+          ],
+          "name": "Deployed",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousManager",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newManager", "type": "address" }
+          ],
+          "name": "ManagerTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "pendingOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipOffered",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "address", "name": "recipient", "type": "address" },
+            { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
+          ],
+          "name": "Withdrawn",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "checkpoint",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "claimOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "uint32", "name": "_startTimestamp", "type": "uint32" },
+            { "internalType": "uint32", "name": "_endTimestamp", "type": "uint32" }
+          ],
+          "name": "getReserveAccumulatedBetween",
+          "outputs": [{ "internalType": "uint224", "name": "", "type": "uint224" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getToken",
+          "outputs": [{ "internalType": "contract IERC20", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "manager",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "owner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "pendingOwner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "renounceOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newManager", "type": "address" }],
+          "name": "setManager",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "token",
+          "outputs": [{ "internalType": "contract IERC20", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
+          "name": "transferOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "withdrawAccumulator",
+          "outputs": [{ "internalType": "uint224", "name": "", "type": "uint224" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_recipient", "type": "address" },
+            { "internalType": "uint256", "name": "_amount", "type": "uint256" }
+          ],
+          "name": "withdrawTo",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ],
+      "tags": [],
+      "extensions": {}
+    },
+    {
+      "chainId": 4,
+      "address": "0xFE7cC866E3a244cf665a4ca4cFfEf7aa028Fc88B",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "Ticket",
       "abi": [
@@ -1468,7 +2681,7 @@
                 { "internalType": "uint32", "name": "timestamp", "type": "uint32" }
               ],
               "indexed": false,
-              "internalType": "struct TwabLibrary.Twab",
+              "internalType": "struct ObservationLib.Observation",
               "name": "newTotalSupplyTwab",
               "type": "tuple"
             }
@@ -1492,7 +2705,7 @@
                 { "internalType": "uint32", "name": "timestamp", "type": "uint32" }
               ],
               "indexed": false,
-              "internalType": "struct TwabLibrary.Twab",
+              "internalType": "struct ObservationLib.Observation",
               "name": "newTwab",
               "type": "tuple"
             }
@@ -1525,20 +2738,6 @@
           "inputs": [],
           "name": "DOMAIN_SEPARATOR",
           "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "MAX_CARDINALITY",
-          "outputs": [{ "internalType": "uint16", "name": "", "type": "uint16" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "TWAB_TIME_TO_LIVE",
-          "outputs": [{ "internalType": "uint32", "name": "", "type": "uint32" }],
           "stateMutability": "view",
           "type": "function"
         },
@@ -1644,11 +2843,11 @@
           "outputs": [
             {
               "components": [
-                { "internalType": "uint224", "name": "balance", "type": "uint224" },
-                { "internalType": "uint16", "name": "nextTwabIndex", "type": "uint16" },
-                { "internalType": "uint16", "name": "cardinality", "type": "uint16" }
+                { "internalType": "uint208", "name": "balance", "type": "uint208" },
+                { "internalType": "uint24", "name": "nextTwabIndex", "type": "uint24" },
+                { "internalType": "uint24", "name": "cardinality", "type": "uint24" }
               ],
-              "internalType": "struct Ticket.AccountDetails",
+              "internalType": "struct TwabLib.AccountDetails",
               "name": "",
               "type": "tuple"
             }
@@ -1710,14 +2909,14 @@
         },
         {
           "inputs": [{ "internalType": "uint32[]", "name": "_targets", "type": "uint32[]" }],
-          "name": "getTotalSupplies",
+          "name": "getTotalSuppliesAt",
           "outputs": [{ "internalType": "uint256[]", "name": "", "type": "uint256[]" }],
           "stateMutability": "view",
           "type": "function"
         },
         {
           "inputs": [{ "internalType": "uint32", "name": "_target", "type": "uint32" }],
-          "name": "getTotalSupply",
+          "name": "getTotalSupplyAt",
           "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
           "stateMutability": "view",
           "type": "function"
@@ -1734,7 +2933,7 @@
                 { "internalType": "uint224", "name": "amount", "type": "uint224" },
                 { "internalType": "uint32", "name": "timestamp", "type": "uint32" }
               ],
-              "internalType": "struct TwabLibrary.Twab",
+              "internalType": "struct ObservationLib.Observation",
               "name": "",
               "type": "tuple"
             }
@@ -1822,494 +3021,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x16b3DC26e52b6723899ED244B1c934CB2Bd5499F",
-      "version": { "major": 1, "minor": 0, "patch": 0 },
-      "type": "TsunamiDrawCalculator",
-      "abi": [
-        {
-          "inputs": [
-            { "internalType": "address", "name": "_owner", "type": "address" },
-            { "internalType": "contract ITicket", "name": "_ticket", "type": "address" },
-            { "internalType": "contract IDrawHistory", "name": "_drawHistory", "type": "address" },
-            {
-              "internalType": "contract TsunamiDrawSettingsHistory",
-              "name": "_tsunamiDrawSettingsHistory",
-              "type": "address"
-            }
-          ],
-          "stateMutability": "nonpayable",
-          "type": "constructor"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "contract ClaimableDraw",
-              "name": "claimableDraw",
-              "type": "address"
-            }
-          ],
-          "name": "ClaimableDrawSet",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "contract ITicket",
-              "name": "ticket",
-              "type": "address"
-            }
-          ],
-          "name": "Deployed",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "contract IDrawHistory",
-              "name": "drawHistory",
-              "type": "address"
-            }
-          ],
-          "name": "DrawHistorySet",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "pendingOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipOffered",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "previousOwner",
-              "type": "address"
-            },
-            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        },
-        {
-          "inputs": [
-            { "internalType": "address", "name": "_user", "type": "address" },
-            { "internalType": "uint32[]", "name": "_drawIds", "type": "uint32[]" },
-            { "internalType": "bytes", "name": "_pickIndicesForDraws", "type": "bytes" }
-          ],
-          "name": "calculate",
-          "outputs": [{ "internalType": "uint256[]", "name": "", "type": "uint256[]" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            { "internalType": "address", "name": "_user", "type": "address" },
-            { "internalType": "uint256[]", "name": "_pickIndices", "type": "uint256[]" },
-            { "internalType": "uint32", "name": "_drawId", "type": "uint32" }
-          ],
-          "name": "checkPrizeDistributionIndicesForDrawId",
-          "outputs": [
-            {
-              "components": [
-                { "internalType": "bool", "name": "won", "type": "bool" },
-                { "internalType": "uint8", "name": "distributionIndex", "type": "uint8" }
-              ],
-              "internalType": "struct TsunamiDrawCalculator.PickPrize[]",
-              "name": "",
-              "type": "tuple[]"
-            }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "claimOwnership",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "getDrawHistory",
-          "outputs": [{ "internalType": "contract IDrawHistory", "name": "", "type": "address" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            { "internalType": "address", "name": "_user", "type": "address" },
-            { "internalType": "uint32[]", "name": "_drawIds", "type": "uint32[]" }
-          ],
-          "name": "getNormalizedBalancesForDrawIds",
-          "outputs": [{ "internalType": "uint256[]", "name": "", "type": "uint256[]" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "getTsunamiDrawSettingsHistory",
-          "outputs": [
-            { "internalType": "contract TsunamiDrawSettingsHistory", "name": "", "type": "address" }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "owner",
-          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "pendingOwner",
-          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "renounceOwnership",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            { "internalType": "contract IDrawHistory", "name": "_drawHistory", "type": "address" }
-          ],
-          "name": "setDrawHistory",
-          "outputs": [{ "internalType": "contract IDrawHistory", "name": "", "type": "address" }],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
-          "name": "transferOwnership",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        }
-      ],
-      "tags": [],
-      "extensions": {}
-    },
-    {
-      "chainId": 4,
-      "address": "0x964359F88163851467fE9e434F618E15a1D79914",
-      "version": { "major": 1, "minor": 0, "patch": 0 },
-      "type": "TsunamiDrawSettingsHistory",
-      "abi": [
-        {
-          "inputs": [
-            { "internalType": "address", "name": "_owner", "type": "address" },
-            { "internalType": "uint8", "name": "_cardinality", "type": "uint8" }
-          ],
-          "stateMutability": "nonpayable",
-          "type": "constructor"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            { "indexed": false, "internalType": "uint8", "name": "cardinality", "type": "uint8" }
-          ],
-          "name": "Deployed",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            { "indexed": false, "internalType": "uint32", "name": "drawId", "type": "uint32" },
-            { "indexed": false, "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-            {
-              "indexed": false,
-              "internalType": "uint256",
-              "name": "winningRandomNumber",
-              "type": "uint256"
-            }
-          ],
-          "name": "DrawSet",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            { "indexed": true, "internalType": "uint32", "name": "drawId", "type": "uint32" },
-            {
-              "components": [
-                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
-                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
-                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
-                { "internalType": "uint256", "name": "prize", "type": "uint256" }
-              ],
-              "indexed": false,
-              "internalType": "struct DrawLib.TsunamiDrawSettings",
-              "name": "drawSettings",
-              "type": "tuple"
-            }
-          ],
-          "name": "DrawSettingsSet",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "previousManager",
-              "type": "address"
-            },
-            { "indexed": true, "internalType": "address", "name": "newManager", "type": "address" }
-          ],
-          "name": "ManagerTransferred",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "pendingOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipOffered",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "previousOwner",
-              "type": "address"
-            },
-            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        },
-        {
-          "inputs": [],
-          "name": "claimOwnership",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [{ "internalType": "uint32", "name": "_drawId", "type": "uint32" }],
-          "name": "getDrawSetting",
-          "outputs": [
-            {
-              "components": [
-                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
-                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
-                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
-                { "internalType": "uint256", "name": "prize", "type": "uint256" }
-              ],
-              "internalType": "struct DrawLib.TsunamiDrawSettings",
-              "name": "",
-              "type": "tuple"
-            }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [{ "internalType": "uint32[]", "name": "_drawIds", "type": "uint32[]" }],
-          "name": "getDrawSettings",
-          "outputs": [
-            {
-              "components": [
-                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
-                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
-                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
-                { "internalType": "uint256", "name": "prize", "type": "uint256" }
-              ],
-              "internalType": "struct DrawLib.TsunamiDrawSettings[]",
-              "name": "",
-              "type": "tuple[]"
-            }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "getNewestDrawSettings",
-          "outputs": [
-            {
-              "components": [
-                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
-                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
-                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
-                { "internalType": "uint256", "name": "prize", "type": "uint256" }
-              ],
-              "internalType": "struct DrawLib.TsunamiDrawSettings",
-              "name": "",
-              "type": "tuple"
-            }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "getOldestDrawSettings",
-          "outputs": [
-            {
-              "components": [
-                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
-                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
-                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
-                { "internalType": "uint256", "name": "prize", "type": "uint256" }
-              ],
-              "internalType": "struct DrawLib.TsunamiDrawSettings",
-              "name": "",
-              "type": "tuple"
-            }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "manager",
-          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "owner",
-          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "pendingOwner",
-          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            { "internalType": "uint32", "name": "_drawId", "type": "uint32" },
-            {
-              "components": [
-                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
-                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
-                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
-                { "internalType": "uint256", "name": "prize", "type": "uint256" }
-              ],
-              "internalType": "struct DrawLib.TsunamiDrawSettings",
-              "name": "_drawSettings",
-              "type": "tuple"
-            }
-          ],
-          "name": "pushDrawSettings",
-          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "renounceOwnership",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            { "internalType": "uint32", "name": "_drawId", "type": "uint32" },
-            {
-              "components": [
-                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
-                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
-                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
-                { "internalType": "uint256", "name": "prize", "type": "uint256" }
-              ],
-              "internalType": "struct DrawLib.TsunamiDrawSettings",
-              "name": "_drawSettings",
-              "type": "tuple"
-            }
-          ],
-          "name": "setDrawSetting",
-          "outputs": [{ "internalType": "uint32", "name": "", "type": "uint32" }],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [{ "internalType": "address", "name": "_newManager", "type": "address" }],
-          "name": "setManager",
-          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
-          "name": "transferOwnership",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        }
-      ],
-      "tags": [],
-      "extensions": {}
-    },
-    {
-      "chainId": 4,
-      "address": "0xF66E1ebB2101a155D0BF58BbB7E4f80a87d3CccD",
+      "address": "0xdd42d57861d3861b77F0FC55b31521fa5B2DE257",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "YieldSourcePrizePool",
       "abi": [
@@ -2372,7 +3084,6 @@
         {
           "anonymous": false,
           "inputs": [
-            { "indexed": false, "internalType": "address", "name": "token", "type": "address" },
             { "indexed": false, "internalType": "uint256", "name": "balanceCap", "type": "uint256" }
           ],
           "name": "BalanceCapSet",
@@ -2577,7 +3288,7 @@
           "type": "function"
         },
         {
-          "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "inputs": [],
           "name": "balanceCap",
           "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
           "stateMutability": "view",
@@ -2625,6 +3336,15 @@
           "type": "function"
         },
         {
+          "inputs": [],
+          "name": "getTicket",
+          "outputs": [
+            { "internalType": "contract IControlledToken", "name": "", "type": "address" }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
           "inputs": [
             {
               "internalType": "contract IControlledToken",
@@ -2646,14 +3366,14 @@
         },
         {
           "inputs": [
-            { "internalType": "address", "name": "_operator", "type": "address" },
-            { "internalType": "address", "name": "_from", "type": "address" },
-            { "internalType": "uint256", "name": "_tokenId", "type": "uint256" },
-            { "internalType": "bytes", "name": "_data", "type": "bytes" }
+            { "internalType": "address", "name": "", "type": "address" },
+            { "internalType": "address", "name": "", "type": "address" },
+            { "internalType": "uint256", "name": "", "type": "uint256" },
+            { "internalType": "bytes", "name": "", "type": "bytes" }
           ],
           "name": "onERC721Received",
           "outputs": [{ "internalType": "bytes4", "name": "", "type": "bytes4" }],
-          "stateMutability": "nonpayable",
+          "stateMutability": "pure",
           "type": "function"
         },
         {
@@ -2685,10 +3405,7 @@
           "type": "function"
         },
         {
-          "inputs": [
-            { "internalType": "address", "name": "_token", "type": "address" },
-            { "internalType": "uint256", "name": "_balanceCap", "type": "uint256" }
-          ],
+          "inputs": [{ "internalType": "uint256", "name": "_balanceCap", "type": "uint256" }],
           "name": "setBalanceCap",
           "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
           "stateMutability": "nonpayable",
@@ -2774,17 +3491,18 @@
     },
     {
       "chainId": 80001,
-      "address": "0xcF343B23178869BE12831D4f365dd4BfbCA8066A",
+      "address": "0x0C5Bc167E996987e664705f928e33e138d2f542E",
       "version": { "major": 1, "minor": 0, "patch": 0 },
-      "type": "ClaimableDraw",
+      "type": "DrawCalculator",
       "abi": [
         {
           "inputs": [
             { "internalType": "address", "name": "_owner", "type": "address" },
-            { "internalType": "contract IERC20", "name": "_token", "type": "address" },
+            { "internalType": "contract ITicket", "name": "_ticket", "type": "address" },
+            { "internalType": "contract IDrawHistory", "name": "_drawHistory", "type": "address" },
             {
-              "internalType": "contract IDrawCalculator",
-              "name": "_drawCalculator",
+              "internalType": "contract PrizeDistributionHistory",
+              "name": "_prizeDistributionHistory",
               "type": "address"
             }
           ],
@@ -2794,24 +3512,14 @@
         {
           "anonymous": false,
           "inputs": [
-            { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
-            { "indexed": true, "internalType": "uint32", "name": "drawId", "type": "uint32" },
-            { "indexed": false, "internalType": "uint256", "name": "payout", "type": "uint256" }
-          ],
-          "name": "ClaimedDraw",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
             {
               "indexed": true,
-              "internalType": "contract IDrawCalculator",
-              "name": "calculator",
+              "internalType": "contract ITicket",
+              "name": "ticket",
               "type": "address"
             }
           ],
-          "name": "DrawCalculatorSet",
+          "name": "Deployed",
           "type": "event"
         },
         {
@@ -2819,14 +3527,25 @@
           "inputs": [
             {
               "indexed": true,
-              "internalType": "contract IERC20",
-              "name": "token",
+              "internalType": "contract IDrawHistory",
+              "name": "drawHistory",
               "type": "address"
-            },
-            { "indexed": true, "internalType": "address", "name": "to", "type": "address" },
-            { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
+            }
           ],
-          "name": "ERC20Withdrawn",
+          "name": "DrawHistorySet",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "contract DrawPrize",
+              "name": "drawPrize",
+              "type": "address"
+            }
+          ],
+          "name": "DrawPrizeSet",
           "type": "event"
         },
         {
@@ -2857,27 +3576,42 @@
           "type": "event"
         },
         {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "contract IERC20",
-              "name": "token",
-              "type": "address"
-            }
-          ],
-          "name": "TokenSet",
-          "type": "event"
+          "inputs": [],
+          "name": "DISTRIBUTIONS_LENGTH",
+          "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }],
+          "stateMutability": "view",
+          "type": "function"
         },
         {
           "inputs": [
             { "internalType": "address", "name": "_user", "type": "address" },
             { "internalType": "uint32[]", "name": "_drawIds", "type": "uint32[]" },
-            { "internalType": "bytes", "name": "_data", "type": "bytes" }
+            { "internalType": "bytes", "name": "_pickIndicesForDraws", "type": "bytes" }
           ],
-          "name": "claim",
-          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-          "stateMutability": "nonpayable",
+          "name": "calculate",
+          "outputs": [{ "internalType": "uint256[]", "name": "", "type": "uint256[]" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_user", "type": "address" },
+            { "internalType": "uint64[]", "name": "_pickIndices", "type": "uint64[]" },
+            { "internalType": "uint32", "name": "_drawId", "type": "uint32" }
+          ],
+          "name": "checkPrizeDistributionIndicesForDrawId",
+          "outputs": [
+            {
+              "components": [
+                { "internalType": "bool", "name": "won", "type": "bool" },
+                { "internalType": "uint8", "name": "distributionIndex", "type": "uint8" }
+              ],
+              "internalType": "struct IDrawCalculator.PickPrize[]",
+              "name": "",
+              "type": "tuple[]"
+            }
+          ],
+          "stateMutability": "view",
           "type": "function"
         },
         {
@@ -2889,27 +3623,27 @@
         },
         {
           "inputs": [],
-          "name": "getDrawCalculator",
-          "outputs": [
-            { "internalType": "contract IDrawCalculator", "name": "", "type": "address" }
-          ],
+          "name": "getDrawHistory",
+          "outputs": [{ "internalType": "contract IDrawHistory", "name": "", "type": "address" }],
           "stateMutability": "view",
           "type": "function"
         },
         {
           "inputs": [
-            { "internalType": "address", "name": "user", "type": "address" },
-            { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+            { "internalType": "address", "name": "_user", "type": "address" },
+            { "internalType": "uint32[]", "name": "_drawIds", "type": "uint32[]" }
           ],
-          "name": "getDrawPayoutBalanceOf",
-          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+          "name": "getNormalizedBalancesForDrawIds",
+          "outputs": [{ "internalType": "uint256[]", "name": "", "type": "uint256[]" }],
           "stateMutability": "view",
           "type": "function"
         },
         {
           "inputs": [],
-          "name": "getToken",
-          "outputs": [{ "internalType": "contract IERC20", "name": "", "type": "address" }],
+          "name": "getPrizeDistributionHistory",
+          "outputs": [
+            { "internalType": "contract PrizeDistributionHistory", "name": "", "type": "address" }
+          ],
           "stateMutability": "view",
           "type": "function"
         },
@@ -2936,16 +3670,10 @@
         },
         {
           "inputs": [
-            {
-              "internalType": "contract IDrawCalculator",
-              "name": "_newCalculator",
-              "type": "address"
-            }
+            { "internalType": "contract IDrawHistory", "name": "_drawHistory", "type": "address" }
           ],
-          "name": "setDrawCalculator",
-          "outputs": [
-            { "internalType": "contract IDrawCalculator", "name": "", "type": "address" }
-          ],
+          "name": "setDrawHistory",
+          "outputs": [{ "internalType": "contract IDrawHistory", "name": "", "type": "address" }],
           "stateMutability": "nonpayable",
           "type": "function"
         },
@@ -2955,17 +3683,6 @@
           "outputs": [],
           "stateMutability": "nonpayable",
           "type": "function"
-        },
-        {
-          "inputs": [
-            { "internalType": "contract IERC20", "name": "_erc20Token", "type": "address" },
-            { "internalType": "address", "name": "_to", "type": "address" },
-            { "internalType": "uint256", "name": "_amount", "type": "uint256" }
-          ],
-          "name": "withdrawERC20",
-          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-          "stateMutability": "nonpayable",
-          "type": "function"
         }
       ],
       "tags": [],
@@ -2973,13 +3690,13 @@
     },
     {
       "chainId": 80001,
-      "address": "0x2985fB374358B9F63eC824Cc5704367F600da0e7",
+      "address": "0xd90B4fb6c391f47fc7643ed695aA77318d23aC3B",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawCalculatorTimelock",
       "abi": [
         {
           "inputs": [
-            { "internalType": "address", "name": "owner", "type": "address" },
+            { "internalType": "address", "name": "_owner", "type": "address" },
             {
               "internalType": "contract IDrawCalculator",
               "name": "_calculator",
@@ -2995,22 +3712,15 @@
           "inputs": [
             {
               "indexed": true,
-              "internalType": "contract ClaimableDraw",
-              "name": "claimableDraw",
+              "internalType": "contract IDrawCalculator",
+              "name": "drawCalculator",
               "type": "address"
-            }
-          ],
-          "name": "ClaimableDrawSet",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
+            },
             {
-              "indexed": true,
-              "internalType": "contract ITicket",
-              "name": "ticket",
-              "type": "address"
+              "indexed": false,
+              "internalType": "uint32",
+              "name": "timelockDuration",
+              "type": "uint32"
             }
           ],
           "name": "Deployed",
@@ -3219,7 +3929,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x603799B6b16d11367cD95EdC29794ad8ea723c51",
+      "address": "0x2FAd3e7B44751F15424232Ba16414Be72bB2d806",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawHistory",
       "abi": [
@@ -3234,13 +3944,19 @@
         {
           "anonymous": false,
           "inputs": [
-            { "indexed": false, "internalType": "uint32", "name": "drawId", "type": "uint32" },
-            { "indexed": false, "internalType": "uint32", "name": "timestamp", "type": "uint32" },
+            { "indexed": true, "internalType": "uint32", "name": "drawId", "type": "uint32" },
             {
+              "components": [
+                { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint64", "name": "timestamp", "type": "uint64" },
+                { "internalType": "uint64", "name": "beaconPeriodStartedAt", "type": "uint64" },
+                { "internalType": "uint32", "name": "beaconPeriodSeconds", "type": "uint32" }
+              ],
               "indexed": false,
-              "internalType": "uint256",
-              "name": "winningRandomNumber",
-              "type": "uint256"
+              "internalType": "struct DrawLib.Draw",
+              "name": "draw",
+              "type": "tuple"
             }
           ],
           "name": "DrawSet",
@@ -3302,32 +4018,16 @@
           "type": "function"
         },
         {
-          "inputs": [],
-          "name": "draws",
-          "outputs": [
-            {
-              "components": [
-                { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
-                { "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawId", "type": "uint32" }
-              ],
-              "internalType": "struct DrawLib.Draw[256]",
-              "name": "",
-              "type": "tuple[256]"
-            }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
           "inputs": [{ "internalType": "uint32", "name": "drawId", "type": "uint32" }],
           "name": "getDraw",
           "outputs": [
             {
               "components": [
                 { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
-                { "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint64", "name": "timestamp", "type": "uint64" },
+                { "internalType": "uint64", "name": "beaconPeriodStartedAt", "type": "uint64" },
+                { "internalType": "uint32", "name": "beaconPeriodSeconds", "type": "uint32" }
               ],
               "internalType": "struct DrawLib.Draw",
               "name": "",
@@ -3344,8 +4044,10 @@
             {
               "components": [
                 { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
-                { "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint64", "name": "timestamp", "type": "uint64" },
+                { "internalType": "uint64", "name": "beaconPeriodStartedAt", "type": "uint64" },
+                { "internalType": "uint32", "name": "beaconPeriodSeconds", "type": "uint32" }
               ],
               "internalType": "struct DrawLib.Draw[]",
               "name": "",
@@ -3362,8 +4064,10 @@
             {
               "components": [
                 { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
-                { "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint64", "name": "timestamp", "type": "uint64" },
+                { "internalType": "uint64", "name": "beaconPeriodStartedAt", "type": "uint64" },
+                { "internalType": "uint32", "name": "beaconPeriodSeconds", "type": "uint32" }
               ],
               "internalType": "struct DrawLib.Draw",
               "name": "",
@@ -3380,8 +4084,10 @@
             {
               "components": [
                 { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
-                { "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint64", "name": "timestamp", "type": "uint64" },
+                { "internalType": "uint64", "name": "beaconPeriodStartedAt", "type": "uint64" },
+                { "internalType": "uint32", "name": "beaconPeriodSeconds", "type": "uint32" }
               ],
               "internalType": "struct DrawLib.Draw",
               "name": "",
@@ -3417,8 +4123,10 @@
             {
               "components": [
                 { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
-                { "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint64", "name": "timestamp", "type": "uint64" },
+                { "internalType": "uint64", "name": "beaconPeriodStartedAt", "type": "uint64" },
+                { "internalType": "uint32", "name": "beaconPeriodSeconds", "type": "uint32" }
               ],
               "internalType": "struct DrawLib.Draw",
               "name": "_draw",
@@ -3442,8 +4150,10 @@
             {
               "components": [
                 { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
-                { "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint64", "name": "timestamp", "type": "uint64" },
+                { "internalType": "uint64", "name": "beaconPeriodStartedAt", "type": "uint64" },
+                { "internalType": "uint32", "name": "beaconPeriodSeconds", "type": "uint32" }
               ],
               "internalType": "struct DrawLib.Draw",
               "name": "_newDraw",
@@ -3475,17 +4185,216 @@
     },
     {
       "chainId": 80001,
-      "address": "0x934cbFA9B3D78ae264Ecb1d592ac0c3B24Dd1bC8",
+      "address": "0x1CFD3aAAD09E37B07523904Cd634540923a706df",
       "version": { "major": 1, "minor": 0, "patch": 0 },
-      "type": "FullTimelockTrigger",
+      "type": "DrawPrize",
       "abi": [
         {
           "inputs": [
-            { "internalType": "address", "name": "owner", "type": "address" },
+            { "internalType": "address", "name": "_owner", "type": "address" },
+            { "internalType": "contract IERC20", "name": "_token", "type": "address" },
+            {
+              "internalType": "contract IDrawCalculator",
+              "name": "_drawCalculator",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
+            { "indexed": true, "internalType": "uint32", "name": "drawId", "type": "uint32" },
+            { "indexed": false, "internalType": "uint256", "name": "payout", "type": "uint256" }
+          ],
+          "name": "ClaimedDraw",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "contract IDrawCalculator",
+              "name": "calculator",
+              "type": "address"
+            }
+          ],
+          "name": "DrawCalculatorSet",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "contract IERC20",
+              "name": "token",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "to", "type": "address" },
+            { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
+          ],
+          "name": "ERC20Withdrawn",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "pendingOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipOffered",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "contract IERC20",
+              "name": "token",
+              "type": "address"
+            }
+          ],
+          "name": "TokenSet",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_user", "type": "address" },
+            { "internalType": "uint32[]", "name": "_drawIds", "type": "uint32[]" },
+            { "internalType": "bytes", "name": "_data", "type": "bytes" }
+          ],
+          "name": "claim",
+          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "claimOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getDrawCalculator",
+          "outputs": [
+            { "internalType": "contract IDrawCalculator", "name": "", "type": "address" }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "user", "type": "address" },
+            { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+          ],
+          "name": "getDrawPayoutBalanceOf",
+          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getToken",
+          "outputs": [{ "internalType": "contract IERC20", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "owner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "pendingOwner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "renounceOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IDrawCalculator",
+              "name": "_newCalculator",
+              "type": "address"
+            }
+          ],
+          "name": "setDrawCalculator",
+          "outputs": [
+            { "internalType": "contract IDrawCalculator", "name": "", "type": "address" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
+          "name": "transferOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "contract IERC20", "name": "_erc20Token", "type": "address" },
+            { "internalType": "address", "name": "_to", "type": "address" },
+            { "internalType": "uint256", "name": "_amount", "type": "uint256" }
+          ],
+          "name": "withdrawERC20",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ],
+      "tags": [],
+      "extensions": {}
+    },
+    {
+      "chainId": 80001,
+      "address": "0xEaE15ec8A403d59178ea35e0dE2f818b5E9BA016",
+      "version": { "major": 1, "minor": 0, "patch": 0 },
+      "type": "L2TimelockTrigger",
+      "abi": [
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_owner", "type": "address" },
             { "internalType": "contract IDrawHistory", "name": "_drawHistory", "type": "address" },
             {
-              "internalType": "contract ITsunamiDrawSettingsHistory",
-              "name": "_tsunamiDrawSettingsHistory",
+              "internalType": "contract IPrizeDistributionHistory",
+              "name": "_prizeDistributionHistory",
               "type": "address"
             },
             {
@@ -3496,6 +4405,31 @@
           ],
           "stateMutability": "nonpayable",
           "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "contract IDrawHistory",
+              "name": "drawHistory",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "contract IPrizeDistributionHistory",
+              "name": "prizeDistributionHistory",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "contract IDrawCalculatorTimelock",
+              "name": "timelock",
+              "type": "address"
+            }
+          ],
+          "name": "Deployed",
+          "type": "event"
         },
         {
           "anonymous": false,
@@ -3574,12 +4508,23 @@
           "type": "function"
         },
         {
+          "inputs": [],
+          "name": "prizeDistributionHistory",
+          "outputs": [
+            { "internalType": "contract IPrizeDistributionHistory", "name": "", "type": "address" }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
           "inputs": [
             {
               "components": [
                 { "internalType": "uint256", "name": "winningRandomNumber", "type": "uint256" },
-                { "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint64", "name": "timestamp", "type": "uint64" },
+                { "internalType": "uint64", "name": "beaconPeriodStartedAt", "type": "uint64" },
+                { "internalType": "uint32", "name": "beaconPeriodSeconds", "type": "uint32" }
               ],
               "internalType": "struct DrawLib.Draw",
               "name": "_draw",
@@ -3589,14 +4534,14 @@
               "components": [
                 { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
                 { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
                 { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
                 { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
                 { "internalType": "uint256", "name": "prize", "type": "uint256" }
               ],
-              "internalType": "struct DrawLib.TsunamiDrawSettings",
+              "internalType": "struct DrawLib.PrizeDistribution",
               "name": "_drawSetting",
               "type": "tuple"
             }
@@ -3635,19 +4580,6 @@
           "outputs": [],
           "stateMutability": "nonpayable",
           "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "tsunamiDrawSettingsHistory",
-          "outputs": [
-            {
-              "internalType": "contract ITsunamiDrawSettingsHistory",
-              "name": "",
-              "type": "address"
-            }
-          ],
-          "stateMutability": "view",
-          "type": "function"
         }
       ],
       "tags": [],
@@ -3655,7 +4587,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0xa338623600E22fDcd857f4832170Cf246a454DDF",
+      "address": "0x35DA1b0D3C7488e00a49293190b1e782a91999Fc",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "MockYieldSource",
       "abi": [
@@ -3834,7 +4766,965 @@
     },
     {
       "chainId": 80001,
-      "address": "0xe4A150E8b2c7C8Cc45E55798181762Ef89200E6f",
+      "address": "0x1bB98333337406178754B4ECcE125a30a961f1FC",
+      "version": { "major": 1, "minor": 0, "patch": 0 },
+      "type": "PrizeDistributionHistory",
+      "abi": [
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_owner", "type": "address" },
+            { "internalType": "uint8", "name": "_cardinality", "type": "uint8" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": false, "internalType": "uint8", "name": "cardinality", "type": "uint8" }
+          ],
+          "name": "Deployed",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": false, "internalType": "uint32", "name": "drawId", "type": "uint32" },
+            { "indexed": false, "internalType": "uint32", "name": "timestamp", "type": "uint32" },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "winningRandomNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "DrawSet",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousManager",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newManager", "type": "address" }
+          ],
+          "name": "ManagerTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "pendingOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipOffered",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "uint32", "name": "drawId", "type": "uint32" },
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" }
+              ],
+              "indexed": false,
+              "internalType": "struct DrawLib.PrizeDistribution",
+              "name": "prizeDistributions",
+              "type": "tuple"
+            }
+          ],
+          "name": "PrizeDistributionsSet",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "claimOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getNewestPrizeDistribution",
+          "outputs": [
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" }
+              ],
+              "internalType": "struct DrawLib.PrizeDistribution",
+              "name": "prizeDistribution",
+              "type": "tuple"
+            },
+            { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getOldestPrizeDistribution",
+          "outputs": [
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" }
+              ],
+              "internalType": "struct DrawLib.PrizeDistribution",
+              "name": "prizeDistribution",
+              "type": "tuple"
+            },
+            { "internalType": "uint32", "name": "drawId", "type": "uint32" }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "uint32", "name": "_drawId", "type": "uint32" }],
+          "name": "getPrizeDistribution",
+          "outputs": [
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" }
+              ],
+              "internalType": "struct DrawLib.PrizeDistribution",
+              "name": "",
+              "type": "tuple"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "uint32[]", "name": "_drawIds", "type": "uint32[]" }],
+          "name": "getPrizeDistributions",
+          "outputs": [
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" }
+              ],
+              "internalType": "struct DrawLib.PrizeDistribution[]",
+              "name": "",
+              "type": "tuple[]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "manager",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "owner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "pendingOwner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "uint32", "name": "_drawId", "type": "uint32" },
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" }
+              ],
+              "internalType": "struct DrawLib.PrizeDistribution",
+              "name": "_prizeDistribution",
+              "type": "tuple"
+            }
+          ],
+          "name": "pushPrizeDistribution",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "renounceOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newManager", "type": "address" }],
+          "name": "setManager",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "uint32", "name": "_drawId", "type": "uint32" },
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
+                { "internalType": "uint32", "name": "startTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
+                { "internalType": "uint32[16]", "name": "distributions", "type": "uint32[16]" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" }
+              ],
+              "internalType": "struct DrawLib.PrizeDistribution",
+              "name": "_prizeDistribution",
+              "type": "tuple"
+            }
+          ],
+          "name": "setPrizeDistribution",
+          "outputs": [{ "internalType": "uint32", "name": "", "type": "uint32" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
+          "name": "transferOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ],
+      "tags": [],
+      "extensions": {}
+    },
+    {
+      "chainId": 80001,
+      "address": "0x1a52fd96bEAE00E3D04001Eca6298F7DA0DbAB4D",
+      "version": { "major": 1, "minor": 0, "patch": 0 },
+      "type": "PrizeFlush",
+      "abi": [
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_owner", "type": "address" },
+            { "internalType": "address", "name": "_destination", "type": "address" },
+            { "internalType": "contract IStrategy", "name": "_strategy", "type": "address" },
+            { "internalType": "contract IReserve", "name": "_reserve", "type": "address" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "destination",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "contract IReserve",
+              "name": "reserve",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "contract IStrategy",
+              "name": "strategy",
+              "type": "address"
+            }
+          ],
+          "name": "Deployed",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "destination",
+              "type": "address"
+            }
+          ],
+          "name": "DestinationSet",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "address", "name": "recipient", "type": "address" },
+            { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
+          ],
+          "name": "Flushed",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousManager",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newManager", "type": "address" }
+          ],
+          "name": "ManagerTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "pendingOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipOffered",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "contract IReserve",
+              "name": "reserve",
+              "type": "address"
+            }
+          ],
+          "name": "ReserveSet",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "contract IStrategy",
+              "name": "strategy",
+              "type": "address"
+            }
+          ],
+          "name": "StrategySet",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "claimOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "flush",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getDestination",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getReserve",
+          "outputs": [{ "internalType": "contract IReserve", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getStrategy",
+          "outputs": [{ "internalType": "contract IStrategy", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "manager",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "owner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "pendingOwner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "renounceOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_destination", "type": "address" }],
+          "name": "setDestination",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newManager", "type": "address" }],
+          "name": "setManager",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "contract IReserve", "name": "_reserve", "type": "address" }
+          ],
+          "name": "setReserve",
+          "outputs": [{ "internalType": "contract IReserve", "name": "", "type": "address" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "contract IStrategy", "name": "_strategy", "type": "address" }
+          ],
+          "name": "setStrategy",
+          "outputs": [{ "internalType": "contract IStrategy", "name": "", "type": "address" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
+          "name": "transferOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ],
+      "tags": [],
+      "extensions": {}
+    },
+    {
+      "chainId": 80001,
+      "address": "0x8b1573f1BD68BA436e991F7621cC872E29658E94",
+      "version": { "major": 1, "minor": 0, "patch": 0 },
+      "type": "PrizeSplitStrategy",
+      "abi": [
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_owner", "type": "address" },
+            { "internalType": "contract IPrizePool", "name": "_prizePool", "type": "address" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "address", "name": "owner", "type": "address" },
+            {
+              "indexed": false,
+              "internalType": "contract IPrizePool",
+              "name": "prizePool",
+              "type": "address"
+            }
+          ],
+          "name": "Deployed",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "totalPrizeCaptured",
+              "type": "uint256"
+            }
+          ],
+          "name": "Distributed",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "pendingOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipOffered",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "prizeAwarded",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "internalType": "contract IControlledToken",
+              "name": "token",
+              "type": "address"
+            }
+          ],
+          "name": "PrizeSplitAwarded",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "uint256", "name": "target", "type": "uint256" }
+          ],
+          "name": "PrizeSplitRemoved",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "address", "name": "target", "type": "address" },
+            { "indexed": false, "internalType": "uint16", "name": "percentage", "type": "uint16" },
+            { "indexed": false, "internalType": "uint256", "name": "index", "type": "uint256" }
+          ],
+          "name": "PrizeSplitSet",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "claimOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "distribute",
+          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getPrizePool",
+          "outputs": [{ "internalType": "contract IPrizePool", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "uint256", "name": "prizeSplitIndex", "type": "uint256" }],
+          "name": "getPrizeSplit",
+          "outputs": [
+            {
+              "components": [
+                { "internalType": "address", "name": "target", "type": "address" },
+                { "internalType": "uint16", "name": "percentage", "type": "uint16" }
+              ],
+              "internalType": "struct IPrizeSplit.PrizeSplitConfig",
+              "name": "",
+              "type": "tuple"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getPrizeSplits",
+          "outputs": [
+            {
+              "components": [
+                { "internalType": "address", "name": "target", "type": "address" },
+                { "internalType": "uint16", "name": "percentage", "type": "uint16" }
+              ],
+              "internalType": "struct IPrizeSplit.PrizeSplitConfig[]",
+              "name": "",
+              "type": "tuple[]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "owner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "pendingOwner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "renounceOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "components": [
+                { "internalType": "address", "name": "target", "type": "address" },
+                { "internalType": "uint16", "name": "percentage", "type": "uint16" }
+              ],
+              "internalType": "struct IPrizeSplit.PrizeSplitConfig",
+              "name": "prizeStrategySplit",
+              "type": "tuple"
+            },
+            { "internalType": "uint8", "name": "prizeSplitIndex", "type": "uint8" }
+          ],
+          "name": "setPrizeSplit",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "components": [
+                { "internalType": "address", "name": "target", "type": "address" },
+                { "internalType": "uint16", "name": "percentage", "type": "uint16" }
+              ],
+              "internalType": "struct IPrizeSplit.PrizeSplitConfig[]",
+              "name": "newPrizeSplits",
+              "type": "tuple[]"
+            }
+          ],
+          "name": "setPrizeSplits",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
+          "name": "transferOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ],
+      "tags": [],
+      "extensions": {}
+    },
+    {
+      "chainId": 80001,
+      "address": "0x98ad9a96BfCD160571B0108eF25537eef5d972Bd",
+      "version": { "major": 1, "minor": 0, "patch": 0 },
+      "type": "Reserve",
+      "abi": [
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_owner", "type": "address" },
+            { "internalType": "contract IERC20", "name": "_token", "type": "address" }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "reserveAccumulated",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "withdrawAccumulated",
+              "type": "uint256"
+            }
+          ],
+          "name": "Checkpoint",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "contract IERC20",
+              "name": "token",
+              "type": "address"
+            }
+          ],
+          "name": "Deployed",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousManager",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newManager", "type": "address" }
+          ],
+          "name": "ManagerTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "pendingOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipOffered",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            { "indexed": true, "internalType": "address", "name": "recipient", "type": "address" },
+            { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
+          ],
+          "name": "Withdrawn",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "checkpoint",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "claimOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "uint32", "name": "_startTimestamp", "type": "uint32" },
+            { "internalType": "uint32", "name": "_endTimestamp", "type": "uint32" }
+          ],
+          "name": "getReserveAccumulatedBetween",
+          "outputs": [{ "internalType": "uint224", "name": "", "type": "uint224" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getToken",
+          "outputs": [{ "internalType": "contract IERC20", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "manager",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "owner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "pendingOwner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "renounceOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newManager", "type": "address" }],
+          "name": "setManager",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "token",
+          "outputs": [{ "internalType": "contract IERC20", "name": "", "type": "address" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
+          "name": "transferOwnership",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "withdrawAccumulator",
+          "outputs": [{ "internalType": "uint224", "name": "", "type": "uint224" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_recipient", "type": "address" },
+            { "internalType": "uint256", "name": "_amount", "type": "uint256" }
+          ],
+          "name": "withdrawTo",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ],
+      "tags": [],
+      "extensions": {}
+    },
+    {
+      "chainId": 80001,
+      "address": "0x8E974cf6f8F4C711256d4d47532a0e75AC055b13",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "Ticket",
       "abi": [
@@ -3887,7 +5777,7 @@
                 { "internalType": "uint32", "name": "timestamp", "type": "uint32" }
               ],
               "indexed": false,
-              "internalType": "struct TwabLibrary.Twab",
+              "internalType": "struct ObservationLib.Observation",
               "name": "newTotalSupplyTwab",
               "type": "tuple"
             }
@@ -3911,7 +5801,7 @@
                 { "internalType": "uint32", "name": "timestamp", "type": "uint32" }
               ],
               "indexed": false,
-              "internalType": "struct TwabLibrary.Twab",
+              "internalType": "struct ObservationLib.Observation",
               "name": "newTwab",
               "type": "tuple"
             }
@@ -3944,20 +5834,6 @@
           "inputs": [],
           "name": "DOMAIN_SEPARATOR",
           "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "MAX_CARDINALITY",
-          "outputs": [{ "internalType": "uint16", "name": "", "type": "uint16" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "TWAB_TIME_TO_LIVE",
-          "outputs": [{ "internalType": "uint32", "name": "", "type": "uint32" }],
           "stateMutability": "view",
           "type": "function"
         },
@@ -4063,11 +5939,11 @@
           "outputs": [
             {
               "components": [
-                { "internalType": "uint224", "name": "balance", "type": "uint224" },
-                { "internalType": "uint16", "name": "nextTwabIndex", "type": "uint16" },
-                { "internalType": "uint16", "name": "cardinality", "type": "uint16" }
+                { "internalType": "uint208", "name": "balance", "type": "uint208" },
+                { "internalType": "uint24", "name": "nextTwabIndex", "type": "uint24" },
+                { "internalType": "uint24", "name": "cardinality", "type": "uint24" }
               ],
-              "internalType": "struct Ticket.AccountDetails",
+              "internalType": "struct TwabLib.AccountDetails",
               "name": "",
               "type": "tuple"
             }
@@ -4129,14 +6005,14 @@
         },
         {
           "inputs": [{ "internalType": "uint32[]", "name": "_targets", "type": "uint32[]" }],
-          "name": "getTotalSupplies",
+          "name": "getTotalSuppliesAt",
           "outputs": [{ "internalType": "uint256[]", "name": "", "type": "uint256[]" }],
           "stateMutability": "view",
           "type": "function"
         },
         {
           "inputs": [{ "internalType": "uint32", "name": "_target", "type": "uint32" }],
-          "name": "getTotalSupply",
+          "name": "getTotalSupplyAt",
           "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
           "stateMutability": "view",
           "type": "function"
@@ -4153,7 +6029,7 @@
                 { "internalType": "uint224", "name": "amount", "type": "uint224" },
                 { "internalType": "uint32", "name": "timestamp", "type": "uint32" }
               ],
-              "internalType": "struct TwabLibrary.Twab",
+              "internalType": "struct ObservationLib.Observation",
               "name": "",
               "type": "tuple"
             }
@@ -4241,494 +6117,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x4CBe91F97b67d2a06bE5f149025C33729eA51E95",
-      "version": { "major": 1, "minor": 0, "patch": 0 },
-      "type": "TsunamiDrawCalculator",
-      "abi": [
-        {
-          "inputs": [
-            { "internalType": "address", "name": "_owner", "type": "address" },
-            { "internalType": "contract ITicket", "name": "_ticket", "type": "address" },
-            { "internalType": "contract IDrawHistory", "name": "_drawHistory", "type": "address" },
-            {
-              "internalType": "contract TsunamiDrawSettingsHistory",
-              "name": "_tsunamiDrawSettingsHistory",
-              "type": "address"
-            }
-          ],
-          "stateMutability": "nonpayable",
-          "type": "constructor"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "contract ClaimableDraw",
-              "name": "claimableDraw",
-              "type": "address"
-            }
-          ],
-          "name": "ClaimableDrawSet",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "contract ITicket",
-              "name": "ticket",
-              "type": "address"
-            }
-          ],
-          "name": "Deployed",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "contract IDrawHistory",
-              "name": "drawHistory",
-              "type": "address"
-            }
-          ],
-          "name": "DrawHistorySet",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "pendingOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipOffered",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "previousOwner",
-              "type": "address"
-            },
-            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        },
-        {
-          "inputs": [
-            { "internalType": "address", "name": "_user", "type": "address" },
-            { "internalType": "uint32[]", "name": "_drawIds", "type": "uint32[]" },
-            { "internalType": "bytes", "name": "_pickIndicesForDraws", "type": "bytes" }
-          ],
-          "name": "calculate",
-          "outputs": [{ "internalType": "uint256[]", "name": "", "type": "uint256[]" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            { "internalType": "address", "name": "_user", "type": "address" },
-            { "internalType": "uint256[]", "name": "_pickIndices", "type": "uint256[]" },
-            { "internalType": "uint32", "name": "_drawId", "type": "uint32" }
-          ],
-          "name": "checkPrizeDistributionIndicesForDrawId",
-          "outputs": [
-            {
-              "components": [
-                { "internalType": "bool", "name": "won", "type": "bool" },
-                { "internalType": "uint8", "name": "distributionIndex", "type": "uint8" }
-              ],
-              "internalType": "struct TsunamiDrawCalculator.PickPrize[]",
-              "name": "",
-              "type": "tuple[]"
-            }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "claimOwnership",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "getDrawHistory",
-          "outputs": [{ "internalType": "contract IDrawHistory", "name": "", "type": "address" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            { "internalType": "address", "name": "_user", "type": "address" },
-            { "internalType": "uint32[]", "name": "_drawIds", "type": "uint32[]" }
-          ],
-          "name": "getNormalizedBalancesForDrawIds",
-          "outputs": [{ "internalType": "uint256[]", "name": "", "type": "uint256[]" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "getTsunamiDrawSettingsHistory",
-          "outputs": [
-            { "internalType": "contract TsunamiDrawSettingsHistory", "name": "", "type": "address" }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "owner",
-          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "pendingOwner",
-          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "renounceOwnership",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            { "internalType": "contract IDrawHistory", "name": "_drawHistory", "type": "address" }
-          ],
-          "name": "setDrawHistory",
-          "outputs": [{ "internalType": "contract IDrawHistory", "name": "", "type": "address" }],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
-          "name": "transferOwnership",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        }
-      ],
-      "tags": [],
-      "extensions": {}
-    },
-    {
-      "chainId": 80001,
-      "address": "0xD73118a8F0aE0D7eC379e7cbD192836f37fF3562",
-      "version": { "major": 1, "minor": 0, "patch": 0 },
-      "type": "TsunamiDrawSettingsHistory",
-      "abi": [
-        {
-          "inputs": [
-            { "internalType": "address", "name": "_owner", "type": "address" },
-            { "internalType": "uint8", "name": "_cardinality", "type": "uint8" }
-          ],
-          "stateMutability": "nonpayable",
-          "type": "constructor"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            { "indexed": false, "internalType": "uint8", "name": "cardinality", "type": "uint8" }
-          ],
-          "name": "Deployed",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            { "indexed": false, "internalType": "uint32", "name": "drawId", "type": "uint32" },
-            { "indexed": false, "internalType": "uint32", "name": "timestamp", "type": "uint32" },
-            {
-              "indexed": false,
-              "internalType": "uint256",
-              "name": "winningRandomNumber",
-              "type": "uint256"
-            }
-          ],
-          "name": "DrawSet",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            { "indexed": true, "internalType": "uint32", "name": "drawId", "type": "uint32" },
-            {
-              "components": [
-                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
-                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
-                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
-                { "internalType": "uint256", "name": "prize", "type": "uint256" }
-              ],
-              "indexed": false,
-              "internalType": "struct DrawLib.TsunamiDrawSettings",
-              "name": "drawSettings",
-              "type": "tuple"
-            }
-          ],
-          "name": "DrawSettingsSet",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "previousManager",
-              "type": "address"
-            },
-            { "indexed": true, "internalType": "address", "name": "newManager", "type": "address" }
-          ],
-          "name": "ManagerTransferred",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "pendingOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipOffered",
-          "type": "event"
-        },
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "previousOwner",
-              "type": "address"
-            },
-            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        },
-        {
-          "inputs": [],
-          "name": "claimOwnership",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [{ "internalType": "uint32", "name": "_drawId", "type": "uint32" }],
-          "name": "getDrawSetting",
-          "outputs": [
-            {
-              "components": [
-                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
-                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
-                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
-                { "internalType": "uint256", "name": "prize", "type": "uint256" }
-              ],
-              "internalType": "struct DrawLib.TsunamiDrawSettings",
-              "name": "",
-              "type": "tuple"
-            }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [{ "internalType": "uint32[]", "name": "_drawIds", "type": "uint32[]" }],
-          "name": "getDrawSettings",
-          "outputs": [
-            {
-              "components": [
-                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
-                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
-                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
-                { "internalType": "uint256", "name": "prize", "type": "uint256" }
-              ],
-              "internalType": "struct DrawLib.TsunamiDrawSettings[]",
-              "name": "",
-              "type": "tuple[]"
-            }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "getNewestDrawSettings",
-          "outputs": [
-            {
-              "components": [
-                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
-                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
-                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
-                { "internalType": "uint256", "name": "prize", "type": "uint256" }
-              ],
-              "internalType": "struct DrawLib.TsunamiDrawSettings",
-              "name": "",
-              "type": "tuple"
-            }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "getOldestDrawSettings",
-          "outputs": [
-            {
-              "components": [
-                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
-                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
-                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
-                { "internalType": "uint256", "name": "prize", "type": "uint256" }
-              ],
-              "internalType": "struct DrawLib.TsunamiDrawSettings",
-              "name": "",
-              "type": "tuple"
-            }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "manager",
-          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "owner",
-          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "pendingOwner",
-          "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            { "internalType": "uint32", "name": "_drawId", "type": "uint32" },
-            {
-              "components": [
-                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
-                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
-                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
-                { "internalType": "uint256", "name": "prize", "type": "uint256" }
-              ],
-              "internalType": "struct DrawLib.TsunamiDrawSettings",
-              "name": "_drawSettings",
-              "type": "tuple"
-            }
-          ],
-          "name": "pushDrawSettings",
-          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "renounceOwnership",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            { "internalType": "uint32", "name": "_drawId", "type": "uint32" },
-            {
-              "components": [
-                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
-                { "internalType": "uint8", "name": "matchCardinality", "type": "uint8" },
-                { "internalType": "uint32", "name": "drawStartTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "drawEndTimestampOffset", "type": "uint32" },
-                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
-                { "internalType": "uint136", "name": "numberOfPicks", "type": "uint136" },
-                { "internalType": "uint32[]", "name": "distributions", "type": "uint32[]" },
-                { "internalType": "uint256", "name": "prize", "type": "uint256" }
-              ],
-              "internalType": "struct DrawLib.TsunamiDrawSettings",
-              "name": "_drawSettings",
-              "type": "tuple"
-            }
-          ],
-          "name": "setDrawSetting",
-          "outputs": [{ "internalType": "uint32", "name": "", "type": "uint32" }],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [{ "internalType": "address", "name": "_newManager", "type": "address" }],
-          "name": "setManager",
-          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [{ "internalType": "address", "name": "_newOwner", "type": "address" }],
-          "name": "transferOwnership",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        }
-      ],
-      "tags": [],
-      "extensions": {}
-    },
-    {
-      "chainId": 80001,
-      "address": "0x3969d3B069Abe727E11300E68AFA6848B1EC53bA",
+      "address": "0xAa86666831156241B106b32E56447586a33f0b04",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "YieldSourcePrizePool",
       "abi": [
@@ -4791,7 +6180,6 @@
         {
           "anonymous": false,
           "inputs": [
-            { "indexed": false, "internalType": "address", "name": "token", "type": "address" },
             { "indexed": false, "internalType": "uint256", "name": "balanceCap", "type": "uint256" }
           ],
           "name": "BalanceCapSet",
@@ -4996,7 +6384,7 @@
           "type": "function"
         },
         {
-          "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+          "inputs": [],
           "name": "balanceCap",
           "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
           "stateMutability": "view",
@@ -5044,6 +6432,15 @@
           "type": "function"
         },
         {
+          "inputs": [],
+          "name": "getTicket",
+          "outputs": [
+            { "internalType": "contract IControlledToken", "name": "", "type": "address" }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
           "inputs": [
             {
               "internalType": "contract IControlledToken",
@@ -5065,14 +6462,14 @@
         },
         {
           "inputs": [
-            { "internalType": "address", "name": "_operator", "type": "address" },
-            { "internalType": "address", "name": "_from", "type": "address" },
-            { "internalType": "uint256", "name": "_tokenId", "type": "uint256" },
-            { "internalType": "bytes", "name": "_data", "type": "bytes" }
+            { "internalType": "address", "name": "", "type": "address" },
+            { "internalType": "address", "name": "", "type": "address" },
+            { "internalType": "uint256", "name": "", "type": "uint256" },
+            { "internalType": "bytes", "name": "", "type": "bytes" }
           ],
           "name": "onERC721Received",
           "outputs": [{ "internalType": "bytes4", "name": "", "type": "bytes4" }],
-          "stateMutability": "nonpayable",
+          "stateMutability": "pure",
           "type": "function"
         },
         {
@@ -5104,10 +6501,7 @@
           "type": "function"
         },
         {
-          "inputs": [
-            { "internalType": "address", "name": "_token", "type": "address" },
-            { "internalType": "uint256", "name": "_balanceCap", "type": "uint256" }
-          ],
+          "inputs": [{ "internalType": "uint256", "name": "_balanceCap", "type": "uint256" }],
           "name": "setBalanceCap",
           "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
           "stateMutability": "nonpayable",
