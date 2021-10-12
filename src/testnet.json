@@ -5,7 +5,7 @@
   "contracts": [
     {
       "chainId": 4,
-      "address": "0x281817bA451f731EdB9BeF638B0c9f0AE6d687A4",
+      "address": "0xbc38855fe5797484FF293c5044029B17E206b01A",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawBeacon",
       "abi": [
@@ -371,7 +371,7 @@
     },
     {
       "chainId": 4,
-      "address": "0xA2Bd95aBE6BbAbcC42f9a9969006dB10d4726C67",
+      "address": "0xFa3e81F18dA442706fF68149E3656A86Fbe5Ad4c",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawBuffer",
       "abi": [
@@ -641,7 +641,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x7447Bc2a5994c24D582E49B01e13BbcbEdBd48e0",
+      "address": "0xA76d751eF81E5bb5F7C5777D999f8F4a611151cB",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawCalculator",
       "abi": [
@@ -835,7 +835,7 @@
     },
     {
       "chainId": 4,
-      "address": "0xa2CA09D8F5b085965DE9DcF1BE2Cbcf278f29BB4",
+      "address": "0x56440C4475CBDbfF3d6564BFa2d3cC905d4c8148",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawCalculatorTimelock",
       "abi": [
@@ -1086,7 +1086,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x887f83958C5Bf5ffC6f481A247E6CE42f1eB169B",
+      "address": "0x442422042E2A6dea6Ca400fCc7039c36EeF00b98",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "L1TimelockTrigger",
       "abi": [
@@ -1288,7 +1288,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x76B29506Ac33881b876B8527ED2D0A5b15824089",
+      "address": "0x8F3e145B899Dc048683C0eE06203D254DEf80396",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "MockYieldSource",
       "abi": [
@@ -1482,7 +1482,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x577A297ACb557F23EC60540bA69b48d8fc2c6Da1",
+      "address": "0xb18d2BC0230B028eE96D1951bD85cB4b9045ec0B",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeDistributionBuffer",
       "abi": [
@@ -1778,7 +1778,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x66b05Bd3Cc63180370BcA3c3E23a88dB17043E3b",
+      "address": "0x4844e7f933Fdb0083c144eb0D9013e71D2003b84",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeDistributor",
       "abi": [
@@ -1977,7 +1977,7 @@
     },
     {
       "chainId": 4,
-      "address": "0xF0CA926B6A75Da5D143f9635C54C9c360c94D323",
+      "address": "0x36f3d8c03a0bace6b92363c3C9C3616BF95Bb230",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeFlush",
       "abi": [
@@ -2218,7 +2218,7 @@
     },
     {
       "chainId": 4,
-      "address": "0xA7978b21d5a3879D93b1007fba96233868F5dCDe",
+      "address": "0x60B588D0FE596488C7f0B18288739D0B9F1f8919",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeSplitStrategy",
       "abi": [
@@ -2446,7 +2446,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x5eE5E70DA057BcfAfe2D5C001aa79e59bBA447D0",
+      "address": "0x3d90c497e6a3FC670fa435916ef4Af6D33aB10C0",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeTierHistory",
       "abi": [
@@ -2693,7 +2693,7 @@
     },
     {
       "chainId": 4,
-      "address": "0xb10C49945029964d3F589C3848f7Ec91AD4a423F",
+      "address": "0xf9EbE5E108146378e7534f878C9F9DcCb5a16E79",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "Reserve",
       "abi": [
@@ -2890,7 +2890,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x0df7Df1794082cd66adAcf8A80Ad868e4d89c6Fd",
+      "address": "0x2b25fA7Aa97c8cA866098dB2d3f2777E0728cE54",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "Ticket",
       "abi": [
@@ -3301,7 +3301,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x6C8E5260FF357b80cb7c1Fc6882ff52416629355",
+      "address": "0xD204bade6940C655c0Eb03C9559943a8e368A461",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "YieldSourcePrizePool",
       "abi": [
@@ -3765,7 +3765,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0xf5FF8c8d23b70Dcaa8EEA48C9D1A6E0d64aD59Cc",
+      "address": "0x5Ae75894EFcC1f8340b58d0efb3d59Bf366b6A4E",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawBuffer",
       "abi": [
@@ -4035,7 +4035,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x55189c8836A7B3998935683F5AFACEE733B5fd20",
+      "address": "0xF273EfaED59fED4F41cb9E693EefD9B1191f1522",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawCalculator",
       "abi": [
@@ -4229,7 +4229,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x128736ee571d60613b9E5d8eB13F67D3d1edc01E",
+      "address": "0x93f1eC3b47895c2cAE13b85bEc46cfF4c6B1220F",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawCalculatorTimelock",
       "abi": [
@@ -4480,7 +4480,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x0960FBf5aCf610C13037B06B46c8C42498c6920a",
+      "address": "0x4A8fa50B10Ac2221d5767Ab3F05ff7011a46D500",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "L2TimelockTrigger",
       "abi": [
@@ -4720,7 +4720,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0xa7d0d3C4f96BB896e0878ef4b83e5cA79700aCB9",
+      "address": "0x454f5AcbBE96162C0B56c74a37ACf79C65D883AC",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "MockYieldSource",
       "abi": [
@@ -4914,7 +4914,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x3a1bc60023cf439335A984d153E02c62F515446E",
+      "address": "0x3FaB224830C182972239F6a599A5A5bd64e43d6D",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeDistributionBuffer",
       "abi": [
@@ -5210,7 +5210,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x1469C3C2F8CbACafCed0A271711e3491700b4f5d",
+      "address": "0x6c7330466aE67d1Eda70BF3ad50A75E8a269E51F",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeDistributor",
       "abi": [
@@ -5409,7 +5409,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0xFcba32cF2aE3C7F28BcFe0E6B383fBF984A60Af6",
+      "address": "0x0589C7a2b2acB895fF0314A394A6D991a9204444",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeFlush",
       "abi": [
@@ -5650,7 +5650,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0xF4660841400FFE067c7172934F31B43e0CBe359F",
+      "address": "0x3E3A097aF79D6389c16A1e2b3A2F056D3D543C53",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeSplitStrategy",
       "abi": [
@@ -5878,7 +5878,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0xbeb9d5538f6454d6cA82e9e901453986abDA1e7A",
+      "address": "0xF438bC6C3250BE17B361042cCa708A743a3FC5e5",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "Reserve",
       "abi": [
@@ -6075,7 +6075,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x734E677AC3699f63f47c2bAE7a8F3c16aFf5aE70",
+      "address": "0xA743f8A9d7c2d7e56e6983d0b60FF19EBc0cE727",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "Ticket",
       "abi": [
@@ -6486,7 +6486,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x3b694ce9d12F0bF032bF002b3b0473Cb58bbe3F0",
+      "address": "0x692F55051Dc060d94227467EE4fbDE72d370728C",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "YieldSourcePrizePool",
       "abi": [

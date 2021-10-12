@@ -1,7 +1,7 @@
 import testData from '../src/test.json'
 import testSchema from '../src/test.schema.json'
 import { schema } from '@pooltogether/contract-list-schema'
-import testnetData from '../src/testnets.json'
+import testnetData from '../src/testnet.json'
 import AJV from 'ajv'
 
 describe('validate test data against schema', () => {
