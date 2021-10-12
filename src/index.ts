@@ -1,3 +1,3 @@
-import testnets from './testnets.json'
+import testnet from './testnet.json'
 
-export { testnets }
+export { testnet }
