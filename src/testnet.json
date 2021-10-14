@@ -5,7 +5,7 @@
   "contracts": [
     {
       "chainId": 4,
-      "address": "0x33cf82d0FF1532D39b68BF5D174C8DA900894CFa",
+      "address": "0x32D69b180EB951F0621358389f82602173866819",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawBeacon",
       "abi": [
@@ -371,7 +371,7 @@
     },
     {
       "chainId": 4,
-      "address": "0xdDc2aB00587700623325518d3e389aA677723DaA",
+      "address": "0x2974bea0a1ED0eaa2F7C8198Fc9008155f9BF4ab",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawBuffer",
       "abi": [
@@ -641,7 +641,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x7509a68832fe5590b26b2E1E8Ef2363F83E55cCD",
+      "address": "0x35f0C8742C64a62703E21eFbeEA2496dD43ab596",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawCalculator",
       "abi": [
@@ -772,7 +772,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x28c95980F3Ef024994627c26a726797626659e23",
+      "address": "0x1687e4c1d6070CC53fDD3b1da05d1C06578Eb259",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawCalculatorTimelock",
       "abi": [
@@ -993,7 +993,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x2b1754C2aCC587Ecdc5A29e68E9B8B3336159213",
+      "address": "0x39Ed1C4947F28938039979D33c7ABD414Bd6c5FD",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "L1TimelockTrigger",
       "abi": [
@@ -1208,7 +1208,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x982e389803F4364e2f4C9DBcA1bf08d3bB0d405c",
+      "address": "0xEb0E976Ad1cB52Ab2A54B986256691c31292d0DE",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "MockYieldSource",
       "abi": [
@@ -1402,7 +1402,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x7CE0E3b6afC20e71e5Dc87e9e88ae08Ee56907a1",
+      "address": "0x97b4aF3ee9CF0a3a010E7cd2788c16f292Ce5b49",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeDistributionBuffer",
       "abi": [
@@ -1705,7 +1705,7 @@
     },
     {
       "chainId": 4,
-      "address": "0xF1B85984C641a21E2fa1159CD1FD0c1BC9843414",
+      "address": "0xfe6bc11738b4011bd59705335fd98fe066a38b51",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeDistributor",
       "abi": [
@@ -1904,7 +1904,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x2fe0668c88fc0D4f4F537C6Acdf529e0635a6ef0",
+      "address": "0x17e4d012ceD5Daaa00cAcfFeE1bA01984CD420db",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeFlush",
       "abi": [
@@ -2145,7 +2145,7 @@
     },
     {
       "chainId": 4,
-      "address": "0xbfB08445848672a22d427790eA232e7e686558A5",
+      "address": "0xBA09592399191A67f1dCD05Fe86A69af8a934691",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeSplitStrategy",
       "abi": [
@@ -2380,7 +2380,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x3780A763c1B24E21c8414f82b3dB394566c6C760",
+      "address": "0xae47Fceec212a0d9ce8bea375dA69E9fE95c6cCf",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeTierHistory",
       "abi": [
@@ -2439,9 +2439,10 @@
                 { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
                 { "internalType": "uint32", "name": "drawId", "type": "uint32" },
                 { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint32", "name": "expiryDuration", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
                 { "internalType": "uint256", "name": "prize", "type": "uint256" },
-                { "internalType": "uint32[16]", "name": "tiers", "type": "uint32[16]" },
-                { "internalType": "uint32", "name": "validityDuration", "type": "uint32" }
+                { "internalType": "uint32[16]", "name": "tiers", "type": "uint32[16]" }
               ],
               "indexed": false,
               "internalType": "struct IPrizeTierHistory.PrizeTier",
@@ -2461,9 +2462,10 @@
                 { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
                 { "internalType": "uint32", "name": "drawId", "type": "uint32" },
                 { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint32", "name": "expiryDuration", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
                 { "internalType": "uint256", "name": "prize", "type": "uint256" },
-                { "internalType": "uint32[16]", "name": "tiers", "type": "uint32[16]" },
-                { "internalType": "uint32", "name": "validityDuration", "type": "uint32" }
+                { "internalType": "uint32[16]", "name": "tiers", "type": "uint32[16]" }
               ],
               "indexed": false,
               "internalType": "struct IPrizeTierHistory.PrizeTier",
@@ -2511,9 +2513,32 @@
                 { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
                 { "internalType": "uint32", "name": "drawId", "type": "uint32" },
                 { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint32", "name": "expiryDuration", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
                 { "internalType": "uint256", "name": "prize", "type": "uint256" },
-                { "internalType": "uint32[16]", "name": "tiers", "type": "uint32[16]" },
-                { "internalType": "uint32", "name": "validityDuration", "type": "uint32" }
+                { "internalType": "uint32[16]", "name": "tiers", "type": "uint32[16]" }
+              ],
+              "internalType": "struct IPrizeTierHistory.PrizeTier",
+              "name": "",
+              "type": "tuple"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [{ "internalType": "uint256", "name": "index", "type": "uint256" }],
+          "name": "getPrizeTierAtIndex",
+          "outputs": [
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint32", "name": "expiryDuration", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" },
+                { "internalType": "uint32[16]", "name": "tiers", "type": "uint32[16]" }
               ],
               "internalType": "struct IPrizeTierHistory.PrizeTier",
               "name": "",
@@ -2532,9 +2557,10 @@
                 { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
                 { "internalType": "uint32", "name": "drawId", "type": "uint32" },
                 { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint32", "name": "expiryDuration", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
                 { "internalType": "uint256", "name": "prize", "type": "uint256" },
-                { "internalType": "uint32[16]", "name": "tiers", "type": "uint32[16]" },
-                { "internalType": "uint32", "name": "validityDuration", "type": "uint32" }
+                { "internalType": "uint32[16]", "name": "tiers", "type": "uint32[16]" }
               ],
               "internalType": "struct IPrizeTierHistory.PrizeTier[]",
               "name": "",
@@ -2572,9 +2598,10 @@
                 { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
                 { "internalType": "uint32", "name": "drawId", "type": "uint32" },
                 { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint32", "name": "expiryDuration", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
                 { "internalType": "uint256", "name": "prize", "type": "uint256" },
-                { "internalType": "uint32[16]", "name": "tiers", "type": "uint32[16]" },
-                { "internalType": "uint32", "name": "validityDuration", "type": "uint32" }
+                { "internalType": "uint32[16]", "name": "tiers", "type": "uint32[16]" }
               ],
               "internalType": "struct IPrizeTierHistory.PrizeTier",
               "name": "_prizeTier",
@@ -2593,9 +2620,10 @@
                 { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
                 { "internalType": "uint32", "name": "drawId", "type": "uint32" },
                 { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint32", "name": "expiryDuration", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
                 { "internalType": "uint256", "name": "prize", "type": "uint256" },
-                { "internalType": "uint32[16]", "name": "tiers", "type": "uint32[16]" },
-                { "internalType": "uint32", "name": "validityDuration", "type": "uint32" }
+                { "internalType": "uint32[16]", "name": "tiers", "type": "uint32[16]" }
               ],
               "internalType": "struct IPrizeTierHistory.PrizeTier",
               "name": "_nextPrizeTier",
@@ -2611,6 +2639,28 @@
           "inputs": [],
           "name": "renounceOwnership",
           "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "components": [
+                { "internalType": "uint8", "name": "bitRangeSize", "type": "uint8" },
+                { "internalType": "uint32", "name": "drawId", "type": "uint32" },
+                { "internalType": "uint32", "name": "maxPicksPerUser", "type": "uint32" },
+                { "internalType": "uint32", "name": "expiryDuration", "type": "uint32" },
+                { "internalType": "uint32", "name": "endTimestampOffset", "type": "uint32" },
+                { "internalType": "uint256", "name": "prize", "type": "uint256" },
+                { "internalType": "uint32[16]", "name": "tiers", "type": "uint32[16]" }
+              ],
+              "internalType": "struct IPrizeTierHistory.PrizeTier",
+              "name": "_prizeTier",
+              "type": "tuple"
+            }
+          ],
+          "name": "replace",
+          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
           "stateMutability": "nonpayable",
           "type": "function"
         },
@@ -2634,7 +2684,7 @@
     },
     {
       "chainId": 4,
-      "address": "0xb435846C8d663bD64749c36b9e4bf136D3769ab9",
+      "address": "0x63a5A4D6ce737071DAde4B80BF8c5A3E921a2c96",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "Reserve",
       "abi": [
@@ -2831,7 +2881,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x8C0dF8dD2a4Fdcf7d06787661Ae113D11f86549C",
+      "address": "0x07A360c6ded68941d9A24Fcd818F5e625b44a556",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "Ticket",
       "abi": [
@@ -3242,7 +3292,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x1536205F40B96A75E1ce8316D2f47cb1cBD914f9",
+      "address": "0xbB8B489Aa452eBA03fe7B6AEe4946d984eAB3366",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "YieldSourcePrizePool",
       "abi": [
@@ -3721,7 +3771,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x47a5ABfAcDebf5af312B034B3b748935A0259136",
+      "address": "0x7ffdBE2d7A65cDb6Af5d2421968CD6daEEd588B2",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawBuffer",
       "abi": [
@@ -3991,7 +4041,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x1D90F79a8515F63881075Ec2C212e18272aD9E38",
+      "address": "0x2972980C042E4a6ac2F2E389d47E2AE47D67f886",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawCalculator",
       "abi": [
@@ -4122,7 +4172,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x2713832849b17458A3bf2CAB51D60BbA3dde98Ab",
+      "address": "0x24FB66cef99B12c4088c9297528f7f13829936D3",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawCalculatorTimelock",
       "abi": [
@@ -4343,7 +4393,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x7b0c6795290Bdbf41E5c00Bf06E561c88bcFe7d8",
+      "address": "0x4bc27Ce56A98cbA03F6dd374f7a50eA993B69381",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "L2TimelockTrigger",
       "abi": [
@@ -4585,7 +4635,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x32e8D4c9d1B711BC958d0Ce8D14b41F77Bb03a64",
+      "address": "0x13422C0bc0F5429D05A8e7A3d908072d877fa19D",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "MockYieldSource",
       "abi": [
@@ -4779,7 +4829,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0xb1EAc75da9bc31B078742C5AF9EDe62EFE31299D",
+      "address": "0xA7BbB6813964443f2c0aF043A744F9eda1c6D4aE",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeDistributionBuffer",
       "abi": [
@@ -5082,7 +5132,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x4C2d729E7052e12e09d29C95fd1f02Bd7471759e",
+      "address": "0x05821572f54C10445379F5A1aD55f4FfFa9e187d",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeDistributor",
       "abi": [
@@ -5281,7 +5331,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x0D33612870cd9A475bBBbB7CC38fC66680dEcAC5",
+      "address": "0xA9d77c843a52BfF8c68FFEC3027c1ba8C03E0B29",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeFlush",
       "abi": [
@@ -5522,7 +5572,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0xadB4D93D84b18b5D82063aCf58b21587c92fdfb5",
+      "address": "0xCfC362770461638358da8FBF8E210e1Ee37A8085",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeSplitStrategy",
       "abi": [
@@ -5757,7 +5807,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x221F769bA9BBce6f23De26E44b53669004D93994",
+      "address": "0x00ee53f6DC15B4cEA439E7a1C40c3F9e00373895",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "Reserve",
       "abi": [
@@ -5954,7 +6004,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0xd89a09084555a7D0ABe7B111b1f78DFEdDd638Be",
+      "address": "0xa700f6AB0e0b900d8864393F09389Fd398bFC0b7",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "Ticket",
       "abi": [
@@ -6365,7 +6415,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0xA8F32475438733B974CD4F19Ba8f97484EeB95a3",
+      "address": "0x70dAC7CC7B2E96a7CB682B08935c391D024D7F7D",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "YieldSourcePrizePool",
       "abi": [
