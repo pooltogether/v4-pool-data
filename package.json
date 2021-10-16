@@ -6,7 +6,10 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "engines": {
     "node": ">=16"
   },
@@ -17,7 +20,7 @@
   "scripts": {
     "start": "tsdx watch --onSuccess \"yalc push\"",
     "reinstall": "rm -rf node_modules && yarn install",
-    "postbuild": "cp src/testnet.json dist/testnet.json",
+    "postbuild": "cp src/testnet.json dist/testnet.json && cp src/mainnet.json dist/mainnet.json",
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
