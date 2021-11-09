@@ -5,7 +5,7 @@
   "contracts": [
     {
       "chainId": 4,
-      "address": "0x32D69b180EB951F0621358389f82602173866819",
+      "address": "0x7990fdacEA7bD7C88177B3734bFD5dB029542Cb9",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawBeacon",
       "abi": [
@@ -371,7 +371,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x2974bea0a1ED0eaa2F7C8198Fc9008155f9BF4ab",
+      "address": "0x84Fb8B1d34420E021284b33CD0E089d7c4A46D74",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawBuffer",
       "abi": [
@@ -641,7 +641,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x35f0C8742C64a62703E21eFbeEA2496dD43ab596",
+      "address": "0x932E0be1EC92E261e47553073403d78A02455851",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawCalculator",
       "abi": [
@@ -772,7 +772,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x1687e4c1d6070CC53fDD3b1da05d1C06578Eb259",
+      "address": "0xEfEbA1FD57fe52E3019538e2308e96eA9a046F3C",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawCalculatorTimelock",
       "abi": [
@@ -993,7 +993,51 @@
     },
     {
       "chainId": 4,
-      "address": "0x39Ed1C4947F28938039979D33c7ABD414Bd6c5FD",
+      "address": "0x1B000D7eBE06a7bCf55cd5F43Dd85AC6Ba167FF8",
+      "version": { "major": 1, "minor": 0, "patch": 0 },
+      "type": "EIP2612PermitAndDeposit",
+      "abi": [
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_owner", "type": "address" },
+            { "internalType": "uint256", "name": "_amount", "type": "uint256" },
+            { "internalType": "uint256", "name": "_deadline", "type": "uint256" },
+            {
+              "components": [
+                { "internalType": "uint8", "name": "v", "type": "uint8" },
+                { "internalType": "bytes32", "name": "r", "type": "bytes32" },
+                { "internalType": "bytes32", "name": "s", "type": "bytes32" }
+              ],
+              "internalType": "struct Signature",
+              "name": "_permitSignature",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                { "internalType": "uint8", "name": "v", "type": "uint8" },
+                { "internalType": "bytes32", "name": "r", "type": "bytes32" },
+                { "internalType": "bytes32", "name": "s", "type": "bytes32" }
+              ],
+              "internalType": "struct Signature",
+              "name": "_delegateSignature",
+              "type": "tuple"
+            },
+            { "internalType": "contract IPrizePool", "name": "_prizePool", "type": "address" },
+            { "internalType": "address", "name": "_to", "type": "address" },
+            { "internalType": "address", "name": "_delegate", "type": "address" }
+          ],
+          "name": "permitAndDepositToAndDelegate",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ],
+      "tags": [],
+      "extensions": {}
+    },
+    {
+      "chainId": 4,
+      "address": "0x7a83E3673Dc898139943bC53e9cba2f2d669cA05",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "L1TimelockTrigger",
       "abi": [
@@ -1208,7 +1252,7 @@
     },
     {
       "chainId": 4,
-      "address": "0xEb0E976Ad1cB52Ab2A54B986256691c31292d0DE",
+      "address": "0xA02d3f82bA4291F4C0E64776564fa2963940C0A7",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "MockYieldSource",
       "abi": [
@@ -1402,7 +1446,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x97b4aF3ee9CF0a3a010E7cd2788c16f292Ce5b49",
+      "address": "0xAD8D4ffeebd8351E40Ec58d0548BF365bAeb364D",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeDistributionBuffer",
       "abi": [
@@ -1705,7 +1749,7 @@
     },
     {
       "chainId": 4,
-      "address": "0xfe6bc11738b4011bd59705335fd98fe066a38b51",
+      "address": "0xf49df4D05d9C99160777b79AdE9aA9222b202eAA",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeDistributor",
       "abi": [
@@ -1904,7 +1948,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x17e4d012ceD5Daaa00cAcfFeE1bA01984CD420db",
+      "address": "0xd57207359B3d05167787c5CdaB9D33dc05fA1a50",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeFlush",
       "abi": [
@@ -2145,7 +2189,7 @@
     },
     {
       "chainId": 4,
-      "address": "0xBA09592399191A67f1dCD05Fe86A69af8a934691",
+      "address": "0xAb01f893FdFDB099d88cc2216a22659357F9c552",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeSplitStrategy",
       "abi": [
@@ -2380,7 +2424,7 @@
     },
     {
       "chainId": 4,
-      "address": "0xae47Fceec212a0d9ce8bea375dA69E9fE95c6cCf",
+      "address": "0x96649B6819690348e0Cd3AC5004fafCe6214Ec6F",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeTierHistory",
       "abi": [
@@ -2684,7 +2728,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x63a5A4D6ce737071DAde4B80BF8c5A3E921a2c96",
+      "address": "0x7F5841eEe4A58A584F721B0B6f5FC05A1d53A6AC",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "Reserve",
       "abi": [
@@ -2881,7 +2925,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x07A360c6ded68941d9A24Fcd818F5e625b44a556",
+      "address": "0x3c7A525a46Db2EE787060083fd8A44403f28a920",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "Ticket",
       "abi": [
@@ -3292,7 +3336,7 @@
     },
     {
       "chainId": 4,
-      "address": "0xbB8B489Aa452eBA03fe7B6AEe4946d984eAB3366",
+      "address": "0x996b69422d473a9B48e4A6C980328365B45847Ca",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "YieldSourcePrizePool",
       "abi": [
@@ -3771,7 +3815,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x7ffdBE2d7A65cDb6Af5d2421968CD6daEEd588B2",
+      "address": "0xc56e44A79153cC4417f2d13e0874B7672c3eE36a",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawBuffer",
       "abi": [
@@ -4041,7 +4085,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x2972980C042E4a6ac2F2E389d47E2AE47D67f886",
+      "address": "0xe1e7e7a87448b003a71822f3c7af12cb6f3e24dc",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawCalculator",
       "abi": [
@@ -4172,7 +4216,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x24FB66cef99B12c4088c9297528f7f13829936D3",
+      "address": "0x7A66CA5Fe9c49bAe510C346c4AB67c3C8ECB64eb",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "DrawCalculatorTimelock",
       "abi": [
@@ -4393,7 +4437,51 @@
     },
     {
       "chainId": 80001,
-      "address": "0x4bc27Ce56A98cbA03F6dd374f7a50eA993B69381",
+      "address": "0x4CcB2E82294618D6BF87C80C97372b5517bEdFD6",
+      "version": { "major": 1, "minor": 0, "patch": 0 },
+      "type": "EIP2612PermitAndDeposit",
+      "abi": [
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_owner", "type": "address" },
+            { "internalType": "uint256", "name": "_amount", "type": "uint256" },
+            { "internalType": "uint256", "name": "_deadline", "type": "uint256" },
+            {
+              "components": [
+                { "internalType": "uint8", "name": "v", "type": "uint8" },
+                { "internalType": "bytes32", "name": "r", "type": "bytes32" },
+                { "internalType": "bytes32", "name": "s", "type": "bytes32" }
+              ],
+              "internalType": "struct Signature",
+              "name": "_permitSignature",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                { "internalType": "uint8", "name": "v", "type": "uint8" },
+                { "internalType": "bytes32", "name": "r", "type": "bytes32" },
+                { "internalType": "bytes32", "name": "s", "type": "bytes32" }
+              ],
+              "internalType": "struct Signature",
+              "name": "_delegateSignature",
+              "type": "tuple"
+            },
+            { "internalType": "contract IPrizePool", "name": "_prizePool", "type": "address" },
+            { "internalType": "address", "name": "_to", "type": "address" },
+            { "internalType": "address", "name": "_delegate", "type": "address" }
+          ],
+          "name": "permitAndDepositToAndDelegate",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ],
+      "tags": [],
+      "extensions": {}
+    },
+    {
+      "chainId": 80001,
+      "address": "0x645Da002094fb8E1Cd2e3CD384aa2dA15Fb46053",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "L2TimelockTrigger",
       "abi": [
@@ -4635,7 +4723,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x13422C0bc0F5429D05A8e7A3d908072d877fa19D",
+      "address": "0x116668C928Ed9de7eE854C01C4c096e162876c23",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "MockYieldSource",
       "abi": [
@@ -4829,7 +4917,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0xA7BbB6813964443f2c0aF043A744F9eda1c6D4aE",
+      "address": "0x91DCc6610D794b06e778d4d3E976Fd7AeDB3e909",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeDistributionBuffer",
       "abi": [
@@ -5132,7 +5220,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x05821572f54C10445379F5A1aD55f4FfFa9e187d",
+      "address": "0x8F3D72C660cE938FA2A5138a5EDb6496C81fADcC",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeDistributor",
       "abi": [
@@ -5331,7 +5419,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0xA9d77c843a52BfF8c68FFEC3027c1ba8C03E0B29",
+      "address": "0xb165323BF2F87529E6e6BB644f1C9B3AbA175e8e",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeFlush",
       "abi": [
@@ -5572,7 +5660,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0xCfC362770461638358da8FBF8E210e1Ee37A8085",
+      "address": "0x0349866d226E4dbEfF0490a4521e2dDDed5B3175",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "PrizeSplitStrategy",
       "abi": [
@@ -5807,7 +5895,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x00ee53f6DC15B4cEA439E7a1C40c3F9e00373895",
+      "address": "0xf97B4D138Ab7faF7705520511C6d670F805De0c5",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "Reserve",
       "abi": [
@@ -6004,7 +6092,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0xa700f6AB0e0b900d8864393F09389Fd398bFC0b7",
+      "address": "0xE850bcb7064486208012f5Ac87F63aB62df82904",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "Ticket",
       "abi": [
@@ -6415,7 +6503,7 @@
     },
     {
       "chainId": 80001,
-      "address": "0x70dAC7CC7B2E96a7CB682B08935c391D024D7F7D",
+      "address": "0xF5165834Fc6ecbBFe6c4317673D6eF2C2d905BcB",
       "version": { "major": 1, "minor": 0, "patch": 0 },
       "type": "YieldSourcePrizePool",
       "abi": [
