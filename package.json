@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@pooltogether/v4-mainnet": "^1.0.1-beta.1",
-    "@pooltogether/v4-testnet": "1.0.0-beta.14"
+    "@pooltogether/v4-testnet": "1.0.0-beta.16"
   },
   "peerDependencies": {},
   "husky": {
