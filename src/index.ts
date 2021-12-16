@@ -1,4 +1,4 @@
-import testnet from '@pooltogether/v4-testnet/testnet.json'
+import testnet from '@pooltogether/v4-testnet/contracts.json'
 import mainnet from '@pooltogether/v4-mainnet/mainnet.json'
 export { testnet }
 export { mainnet }
