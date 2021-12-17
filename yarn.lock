@@ -1277,6 +1277,11 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
+"@nomiclabs/hardhat-ethers@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@nomiclabs/hardhat-ethers/-/hardhat-ethers-2.0.3.tgz#06e20a57274f6ce3148132910e723948a711edf1"
+  integrity sha512-IJ0gBotVtO7YyLZyHNgbxzskUtFok+JkRlKPo8YELqj1ms9XL6Qm3vsfsGdZr22wnJeVEF5TQPotKuwQk21Dag==
+
 "@nomiclabs/hardhat-etherscan@^2.1.8":
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/@nomiclabs/hardhat-etherscan/-/hardhat-etherscan-2.1.8.tgz#e206275e96962cd15e5ba9148b44388bc922d8c2"
@@ -1394,11 +1399,12 @@
   resolved "https://registry.yarnpkg.com/@pooltogether/v4-periphery/-/v4-periphery-1.1.0-beta.1.tgz#7ee1911cbe50e6f3c1a7b36040f42c32ed5489cf"
   integrity sha512-dd2Ayc76w2O5G1mCg74wY7ufBSkrQr8m34+zCqtnZi0fGgcW07qae6VprMRUN0lk+BLU+tS2YpW6cnNVkTO1ag==
 
-"@pooltogether/v4-testnet@1.0.0-beta.16":
-  version "1.0.0-beta.16"
-  resolved "https://registry.yarnpkg.com/@pooltogether/v4-testnet/-/v4-testnet-1.0.0-beta.16.tgz#48edf5379dc7cb60cb26fc3e5c7ff5d4e38366de"
-  integrity sha512-0fEwoeKtf77/SLFmLSMxHMoxzJ0eMfK1TA9SI/1L3v+ZZfiheye98lxH1zYaUO1RGEG7lGXQ5M1G1ZSjf8d/0A==
+"@pooltogether/v4-testnet@1.1.0-beta.2":
+  version "1.1.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@pooltogether/v4-testnet/-/v4-testnet-1.1.0-beta.2.tgz#82b3e4c5f746b6b6be3795846ab442bbc192a88c"
+  integrity sha512-cwfFrnEuEJ3Q0suV5u46XJ6DsBPvieyRKXB6mekfybdKOeXh1d6dH74HJ78i5dUPlpPFaAETNhpbEYoZgGZ57w==
   dependencies:
+    "@nomiclabs/hardhat-ethers" "^2.0.3"
     "@nomiclabs/hardhat-etherscan" "^2.1.8"
     "@openzeppelin/contracts" "4.3.2"
     "@pooltogether/draw-calculator-js" "^1.0.0-beta.25"
