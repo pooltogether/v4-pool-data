@@ -1,3 +1,5 @@
+![CI](https://github.com/pooltogether/v4-pool-data/actions/workflows/main.yml/badge.svg)
+
 # v4 Pool data
 
 A [Contract List](https://github.com/pooltogether/contract-list-schema) of the latest v4 PoolTogether deployments on mainnets and testnets.
