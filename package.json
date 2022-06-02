@@ -1,7 +1,7 @@
 {
   "name": "@pooltogether/v4-pool-data",
   "author": "PoolTogether Inc.",
-  "version": "1.6.0",
+  "version": "1.8.0-beta.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -34,8 +34,8 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "@pooltogether/v4-mainnet": "1.1.0",
-    "@pooltogether/v4-testnet": "1.1.0-beta.2"
+    "@pooltogether/v4-mainnet": "1.5.0",
+    "@pooltogether/v4-testnet": "1.5.0"
   },
   "peerDependencies": {},
   "husky": {
