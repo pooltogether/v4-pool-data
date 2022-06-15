@@ -23,6 +23,7 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
+    "format": "prettier --write \"**/*.{ts,js}\"",
     "prepare": "yarn build"
   },
   "devDependencies": {
@@ -40,13 +41,13 @@
   "peerDependencies": {},
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "yarn format && tsdx lint"
     }
   },
   "prettier": {
     "printWidth": 100,
     "tabWidth": 2,
-    "semi": false,
+    "semi": true,
     "singleQuote": true,
     "quoteProps": "consistent",
     "jsxBracketSameLine": false,
