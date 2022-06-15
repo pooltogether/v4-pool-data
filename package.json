@@ -23,6 +23,7 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
+    "format": "prettier --write \"**/*.{ts,js}\"",
     "prepare": "yarn build"
   },
   "devDependencies": {
@@ -34,19 +35,19 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "@pooltogether/v4-mainnet": "1.5.0",
+    "@pooltogether/v4-mainnet": "1.5.2",
     "@pooltogether/v4-testnet": "1.5.4"
   },
   "peerDependencies": {},
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "yarn format && tsdx lint"
     }
   },
   "prettier": {
     "printWidth": 100,
     "tabWidth": 2,
-    "semi": false,
+    "semi": true,
     "singleQuote": true,
     "quoteProps": "consistent",
     "jsxBracketSameLine": false,
