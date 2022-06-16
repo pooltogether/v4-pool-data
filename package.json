@@ -35,8 +35,9 @@
     "typescript": "4.7.3"
   },
   "dependencies": {
-    "@pooltogether/v4-mainnet": "1.6.1",
-    "@pooltogether/v4-testnet": "1.5.5"
+    "@pooltogether/tokenomics-testnet": "1.0.0-beta.4",
+    "@pooltogether/v4-mainnet": "1.5.2",
+    "@pooltogether/v4-testnet": "1.5.4"
   },
   "peerDependencies": {},
   "husky": {
