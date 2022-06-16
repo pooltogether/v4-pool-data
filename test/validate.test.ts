@@ -1,7 +1,7 @@
 import AJV from 'ajv';
 import { schema } from '@pooltogether/contract-list-schema';
 
-import { mainnet, testnet, tokenomicsTesnet, prizePoolNetworkTestnet } from '../src/index';
+import { mainnet, testnet, tokenomicsTestnet, prizePoolNetworkTestnet } from '../src/index';
 
 describe('validate data against schema', () => {
   let ajv: AJV;
@@ -14,8 +14,8 @@ describe('validate data against schema', () => {
     expect(ajv.validate(schema, testnet)).toBeTruthy();
   });
 
-  it('validate tokenomicsTesnet data', () => {
-    expect(ajv.validate(schema, tokenomicsTesnet)).toBeTruthy();
+  it('validate tokenomicsTestnet data', () => {
+    expect(ajv.validate(schema, tokenomicsTestnet)).toBeTruthy();
   });
 
   it('validate prizePoolNetworkTestnet data', () => {
