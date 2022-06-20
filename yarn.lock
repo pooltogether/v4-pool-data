@@ -1614,10 +1614,10 @@
   dependencies:
     "@pooltogether/owner-manager-contracts" "1.1.0"
 
-"@pooltogether/tokenomics-testnet@1.0.0-beta.4":
-  version "1.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/@pooltogether/tokenomics-testnet/-/tokenomics-testnet-1.0.0-beta.4.tgz#e37f8119a1f8a46abf27992defe66fe2529028b3"
-  integrity sha512-vuwM4ZLxrQ+lZEOoG6VqSbM6hpB2LoJGGTsbeuf3T8u1kq2ECmbMxueU7OfW2s5BkVhsixRCgHIlWJ733oj/0A==
+"@pooltogether/tokenomics-testnet@1.0.0-beta.5":
+  version "1.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@pooltogether/tokenomics-testnet/-/tokenomics-testnet-1.0.0-beta.5.tgz#e7ce9a45289a4e4e9ec6ba62c932c75e509aca75"
+  integrity sha512-R22NWkROSEvzOeXjzoCcma6/dWo/JvdcNaY/08k0qW9CBjqCC8GunEgZNeOxL+6NXk+vz7RFenpvXej3vC0FcQ==
   dependencies:
     "@chainlink/contracts" "0.4.0"
     "@openzeppelin/contracts" "4.4.2"
