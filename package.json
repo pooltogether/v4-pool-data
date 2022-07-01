@@ -34,7 +34,7 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "@pooltogether/v4-mainnet": "1.5.0",
+    "@pooltogether/v4-mainnet": "1.6.0",
     "@pooltogether/v4-testnet": "1.5.4"
   },
   "peerDependencies": {},
