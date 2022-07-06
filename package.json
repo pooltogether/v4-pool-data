@@ -1,7 +1,7 @@
 {
   "name": "@pooltogether/v4-pool-data",
   "author": "PoolTogether Inc.",
-  "version": "1.8.0",
+  "version": "1.8.1-beta.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
