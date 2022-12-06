@@ -1733,10 +1733,10 @@
   resolved "https://registry.npmjs.org/@pooltogether/v4-periphery/-/v4-periphery-1.3.0-beta.1.tgz"
   integrity sha512-INB9oDE9J8C1SWyg6uFSnhsCWuYrrXOuA6ARAtJP59NwCwVtSEwp4HFUKyeWpauUDH4no41VBktcYXQX8Kxoqw==
 
-"@pooltogether/v4-testnet@1.9.0":
-  version "1.9.0"
-  resolved "https://registry.npmjs.org/@pooltogether/v4-testnet/-/v4-testnet-1.9.0.tgz"
-  integrity sha512-aHRs6+ZTEUII3sQqzhqb+V0JPQQvsJziOJ0UhJ6V0ZVTwHO9cp5aDNzrUSCLJ68D6egZ5IG1FGqthkya2t3L0g==
+"@pooltogether/v4-testnet@1.10.0-beta.1":
+  version "1.10.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@pooltogether/v4-testnet/-/v4-testnet-1.10.0-beta.1.tgz#f01f3f75842062dacb7e37b73d33a9be00f4ff9f"
+  integrity sha512-bGLCT9gN679T0Qkk0/1HfzI+BVWMrScXgjnTrGateExHAMtTy3ZGSkqIkMBjLlNutdpHPIy/S+Qo6gEYbXmuHg==
   dependencies:
     "@chainlink/contracts" "0.4.2"
     "@openzeppelin/contracts" "4.7.3"
