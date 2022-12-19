@@ -1697,10 +1697,10 @@
     "@pooltogether/yield-source-interface" "1.5.0-beta.1"
     deploy-eip-1820 "1.0.0"
 
-"@pooltogether/v4-mainnet@1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@pooltogether/v4-mainnet/-/v4-mainnet-1.8.0.tgz#c01fd67446dd97d8cdfa4c0769250fbbbd49810b"
-  integrity sha512-PFKQSXJI5LzNQChYcpMushStrhiwvvSQ4cpJ+MCBuSipKl1EXYMwhDNeN9N1hJeAnUYWV7v++eWmJLa8j3FbUg==
+"@pooltogether/v4-mainnet@1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@pooltogether/v4-mainnet/-/v4-mainnet-1.8.1.tgz#1e79fb3f603f55380ed75a463b33158250bbf1b7"
+  integrity sha512-P0u0bN4OhuuOboBoHJSSczqBg5VMTuMB203vkMnhnmldMRCMkoL1rCTXU2ggVVsYmnsIPpaP20YPNurLFRfU0Q==
   dependencies:
     "@chainlink/contracts" "0.4.0"
     "@openzeppelin/contracts" "4.4.2"
